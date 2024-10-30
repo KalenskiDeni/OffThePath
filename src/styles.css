@@ -185,7 +185,8 @@ nav {
   left: 0;
   right: 0;
   padding: 0.5em 0;
-  border-top: 1px gray;
+  border-top: 1px rgb(78, 78, 78);
+
 }
 
 nav a {
@@ -196,7 +197,9 @@ nav a {
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9em;
-  transition: color 0.3s, background-color 0.3s;
+  padding: 8px;
+  
+
 }
 
 nav a span {
@@ -208,22 +211,9 @@ nav a i {
   font-size: 1.5em;
 }
 
-nav a.active {
-  color: var(--brand-blue);
 
-  border-radius: 50%;
-  padding: 8px;
-}
 
-nav a:hover {
-  color: var(--brand-blue);
-}
 
-.icon-home::before { content: "\f015"; } /* Use actual icon classes based on your icon library */
-.icon-explore::before { content: "\f1de"; }
-.icon-match::before { content: "\f500"; }
-.icon-chat::before { content: "\f27a"; }
-.icon-profile::before { content: "\f007"; }
 
 
 /* ---------- Post Card Styling ---------- */

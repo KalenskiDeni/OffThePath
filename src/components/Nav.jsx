@@ -1,30 +1,62 @@
-import { NavLink } from "react-router-dom";
+
+import { NavLink, useLocation } from "react-router-dom";
+import homeOutlined from '../assets/icons/home-outlined.svg';
+import homeFilled from '../assets/icons/home-filled.svg';
+import exploreOutlined from '../assets/icons/explore-outlined.svg';
+import exploreFilled from '../assets/icons/explore-filled.svg';
+import matchOutlined from '../assets/icons/match-outlined.svg';
+import matchFilled from '../assets/icons/match-filled.svg';
+import chatOutlined from '../assets/icons/chat-outlined.svg';
+import chatFilled from '../assets/icons/chat-filled.svg';
+import profileOutlined from '../assets/icons/profile-outlined.svg';
+import profileFilled from '../assets/icons/profile-filled.svg';
 
 
 export default function Nav() {
+  const location = useLocation(); // Get the current location to determine active route
+
   return (
     <nav>
       <NavLink to="/" exact activeClassName="active">
-        <i className="icon-home"></i>
+        <img 
+          src={location.pathname === '/' ? homeFilled : homeOutlined} 
+          alt="Home" 
+          className="icon" 
+        />
         <span>Home</span>
       </NavLink>
       <NavLink to="/explore" activeClassName="active">
-        <i className="icon-explore"></i>
+        <img 
+          src={location.pathname === '/explore' ? exploreFilled : exploreOutlined} 
+          alt="Explore" 
+          className="icon" 
+        />
         <span>Explore</span>
       </NavLink>
       <NavLink to="/match" activeClassName="active">
-        <i className="icon-match"></i>
+        <img 
+          src={location.pathname === '/match' ? matchFilled : matchOutlined} 
+          alt="Match" 
+          className="icon" 
+        />
         <span>Match</span>
       </NavLink>
       <NavLink to="/chat" activeClassName="active">
-        <i className="icon-chat"></i>
+        <img 
+          src={location.pathname === '/chat' ? chatFilled : chatOutlined} 
+          alt="Chat" 
+          className="icon" 
+        />
         <span>Chat</span>
       </NavLink>
       <NavLink to="/profile" activeClassName="active">
-        <i className="icon-profile"></i>
+        <img 
+          src={location.pathname === '/profile' ? profileFilled : profileOutlined} 
+          alt="Profile" 
+          className="icon" 
+        />
         <span>Profile</span>
       </NavLink>
-     
     </nav>
   );
 }
