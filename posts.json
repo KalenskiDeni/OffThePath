@@ -1,1 +1,17 @@
-
+{
+    "post": {
+      "user": {
+        "name": "John Smith",
+        "location": "Madrid, Spain",
+        "profile_picture": "profile_picture_url"
+      },
+      "timestamp": "12 min ago",
+      "content": "Such a great cultural day today! I visited the National Museum of History, it was absolutely amazing!",
+      "image": "museum_image_url",
+      "hashtags": [
+        "museum",
+        "culture"
+      ]
+    }
+  }
+  
