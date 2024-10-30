@@ -5,6 +5,9 @@ import PostCard from "../components/PostCard";
 export default function HomePage() {
   const [posts, setPosts] = useState([]);
   // Fetch data from the API
+
+
+  
   useEffect(() => {
     async function fetchPosts() {
       const url =
