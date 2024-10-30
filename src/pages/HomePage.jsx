@@ -7,7 +7,7 @@ export default function HomePage() {
   useEffect(() => {
     async function fetchPosts() {
       const url =
-        "https://react-user-crud-app-default-rtdb.firebaseio.com/posts.json";
+        "https://offthepath-webapp-default-rtdb.firebaseio.com/posts.json";
       const response = await fetch(url);
       const data = await response.json(); // JSON.parse(response)
       console.log(data);

@@ -10,7 +10,7 @@ export default function PostDetailPage() {
   useEffect(() => {
     async function getPost() {
       const response = await fetch(
-        `https://react-user-crud-app-default-rtdb.firebaseio.com/posts/${id}.json`
+        `https://offthepath-webapp-default-rtdb.firebaseio.com/posts/${id}.json`
       );
       const data = await response.json();
       setPost(data);
@@ -29,7 +29,7 @@ export default function PostDetailPage() {
     }
 
     const response = await fetch(
-      `https://react-user-crud-app-default-rtdb.firebaseio.com/posts/${id}.json`,
+      `https://offthepath-webapp-default-rtdb.firebaseio.com/posts/${id}.json`,
       {
         method: "DELETE"
       }
