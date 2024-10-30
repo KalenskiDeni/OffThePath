@@ -12,10 +12,12 @@ import profileOutlined from '../assets/icons/profile-outlined.svg';
 import profileFilled from '../assets/icons/profile-filled.svg';
 
 
+
 export default function Nav() {
   const location = useLocation(); // Get the current location to determine active route
 
   return (
+    
     <nav>
       <NavLink to="/" exact activeClassName="active">
         <img 
