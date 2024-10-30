@@ -19,7 +19,6 @@ export default function UserAvatar({ uid }) {
       <img src={user?.image} alt={user?.id} />
       <span>
         <h3>{user?.name}</h3>
-        <p>{user?.title}</p>
       </span>
     </div>
   );

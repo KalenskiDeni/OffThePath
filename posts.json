@@ -5,24 +5,25 @@
       "image": "https://plus.unsplash.com/premium_photo-1697729828374-96545e9e26be?q=80&w=1816&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "time": "12 min ago",
       "hashtags": "#museum, #culture",
-      "location": "Madrid, Spain"
+      "location": "Madrid, Spain",
+      "uid" : "John"
     },
     "2": {
       "caption": "Just spent the last few days exploring Bali, and I am completely blown away! The beaches are stunning, but it is the hidden temples and lush rice terraces that really made my solo trip unforgettable. I met some locals who showed me around Ubud, and the food? Incredible.",
       "image": "https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "time": "7 h ago",
       "hashtags": "#nature, #culture",
-      "location": "Bali, Indonesia"
-    }
+      "location": "Bali, Indonesia",
+      "uid" : "Amanda"   }
   },
 
-  "travellers": {
+  "users": {
     "John": {
-      "avatar": "https://plus.unsplash.com/premium_photo-1670985849576-175bab7fe0e4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "image": "https://plus.unsplash.com/premium_photo-1670985849576-175bab7fe0e4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "name": "John Smith"
     },
     "Amanda": {
-      "avatar": "https://images.unsplash.com/photo-1584650854920-c728d644c77f?q=80&w=1905&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "image": "https://images.unsplash.com/photo-1584650854920-c728d644c77f?q=80&w=1905&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "name": "Amanda Davis"
     }
   },
@@ -33,7 +34,7 @@
       "name": "Albert",
       "location": "Madrid, Spain",
       "age": "27",
-      "interests": "hiking, camping, parks", 
+      "interests": ["hiking", "camping, parks"], 
       "about": "I am a local from Madrid, and I love to show people around the city. I am a big fan of the outdoors, and I know all the best spots for hiking and camping. I also love to visit the parks in the city, and I can show you some of the best ones in Madrid.",
       "photos": "https://plus.unsplash.com/premium_photo-1697730214411-90916c40f30d?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "photos-location": "Madrid, Spain",
@@ -44,7 +45,7 @@
       "name": "Luis",
       "location": "Rome, Italy",
       "age": "21",
-      "interests": "photography, museums", 
+      "interests": ["photography", "museums"], 
       "about": "I am a local from Rome, and I love to show people around the city. I am a big fan of photography, and I know all the best spots for taking pictures. I also love to visit the museums in the city, and I can show you some of the best ones in Rome.",
       "photos": "https://images.unsplash.com/photo-1650811019535-26c83d4f5315?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "photos-location": "Rome, Italy",
@@ -55,7 +56,7 @@
       "name": "Lucia",
       "location": "NYC, USA",
       "age": "24",
-      "interests": "food tasting, shopping", 
+      "interests": ["food tasting", "shopping"], 
       "about": "I am a local from NYC, and I love to show people around the city. I am a big fan of food tasting, and I know all the best spots for trying out different cuisines. I also love to go shopping in the city, and I can show you some of the best places to shop in NYC.",
       "photos": "https://images.unsplash.com/photo-1582719806491-a8bc5b9fa65c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "photos-location": "NYC, USA",
