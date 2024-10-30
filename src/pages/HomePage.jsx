@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import PostCard from "../components/PostCard";
+import { NavLink } from "react-router-dom";
+
 
 
 export default function HomePage() {
   const [posts, setPosts] = useState([]);
   // Fetch data from the API
+
+ 
 
 
   
@@ -28,7 +32,14 @@ export default function HomePage() {
   }, []);
 
   return (
+    
     <section className="page">
+        <div className="create-post-button">
+        <NavLink to="/create" activeClassName="active">
+          <i className="icon-create"></i>
+          <span class="create-button-text">Tell us about your latest adventure...</span>
+        </NavLink>
+      </div>
       <div className="grid">
         {posts.map(post => (
           <PostCard key={post.id} post={post} />

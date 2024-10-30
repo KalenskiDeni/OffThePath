@@ -1,11 +1,11 @@
 /* ---------- Root Variables ---------- */
 :root {
-  --green: rgb(38, 76, 89);
-  --dark-green: rgb(9, 47, 59);
-  --light-green: rgb(172, 198, 201);
-  --light-grey: #f1f1f4;
-  --text-color-danger: #f44250;
-  --text-color-dark: #333;
+  --brand-blue: #216869;
+  --brand-white:#F7F7F7;
+  --brand-dark-blue:#182726;
+  --brand-black:#121312;
+  --brand-light-gray: #D1CFC9;
+
   --text-color-light: #f1f1f1;
   --white: #f1f1f1;
 }
@@ -23,8 +23,8 @@ html {
 
 body,
 html {
-  background-color: var(--light-green);
-  color: var(--text-color-dark);
+  background-color: var(--Brand-white, #F7F7F7);;
+  color: var(--brand-black);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   height: 100%;
@@ -53,7 +53,7 @@ a {
 }
 
 a:hover {
-  color: var(--dark-green);
+  color: var(--brand-dark-blue);
 }
 
 /* ---------- Form, Input, and Button Styling ---------- */
@@ -77,7 +77,7 @@ button {
   font-weight: 500;
   cursor: pointer;
   padding: 1em 2em;
-  background-color: var(--green);
+  background-color: var(--brand-blue);
   transition: 0.5s;
   width: 100%;
 }
@@ -155,116 +155,94 @@ form {
   margin: 1em 0;
 }
 
+
+
+.create-post-button {
+  margin-top: 40px; 
+  margin-left: 30px; 
+  
+  background-color: #ffffff; 
+  color: white; 
+  border: 2px solid #959595; 
+  border-radius: 25px; 
+  padding: 15px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  width: 330px;
+  
+}
+
+.create-button-text {
+  color: var(--brand-light-gray);
+}
+
 /* ---------- Navigation Styling ---------- */
 nav {
-  background-color: var(--green);
-  display: grid;
-  left: 0;
+  background-color: var(--brand-white);
+  display: flex;
+  justify-content: space-around;
   position: fixed;
+  bottom: 0;
+  left: 0;
   right: 0;
-  text-align: center;
-  top: 0;
-  padding: 1em 2em;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1em;
+  padding: 0.5em 0;
+  border-top: 1px gray;
 }
 
 nav a {
-  display: inline-block;
-  color: var(--text-color-light);
-  text-align: center;
-  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: gray;
   text-decoration: none;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border: 2px solid var(--green);
   font-weight: 500;
-  font-size: 1.2em;
-  border-radius: 8px;
-  transition: 0.5s;
+  font-size: 0.9em;
+  transition: color 0.3s, background-color 0.3s;
 }
 
-nav a:hover {
-  background-color: var(--light-green);
-  color: var(--green);
+nav a span {
+  margin-top: 4px;
+  font-size: 0.8em;
+}
+
+nav a i {
+  font-size: 1.5em;
 }
 
 nav a.active {
-  background-color: var(--light-green);
-  color: var(--green);
+  color: var(--brand-blue);
+
+  border-radius: 50%;
+  padding: 8px;
 }
 
-/* ---------- Page Styling ---------- */
-.page {
-  animation: fadeIn 0.5s;
-  padding: 140px 2em 2em;
+nav a:hover {
+  color: var(--brand-blue);
 }
 
-/* ---------- Container Styling ---------- */
-.container {
-  max-width: 700px;
-  margin: auto;
-}
+.icon-home::before { content: "\f015"; } /* Use actual icon classes based on your icon library */
+.icon-explore::before { content: "\f1de"; }
+.icon-match::before { content: "\f500"; }
+.icon-chat::before { content: "\f27a"; }
+.icon-profile::before { content: "\f007"; }
 
-/* ---------- Grid Container Styling ---------- */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1em;
-}
-
-@media (min-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 992px) {
-  .grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-.grid > .post-card {
-  cursor: pointer;
-}
-
-/* ---------- Grid Filter Styling ---------- */
-.grid-filter {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 1em;
-  padding: 1em;
-  background-color: var(--white);
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  margin: 0 0 1em;
-  align-items: center;
-}
-
-.grid-filter select {
-  width: 100%;
-  padding: 1.1rem;
-}
-
-.grid-filter input,
-.grid-filter select {
-  margin: 1em 0 0;
-}
 
 /* ---------- Post Card Styling ---------- */
 .post-card {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
-  padding: 1.5em;
+  padding: 1em;
   background-color: var(--white);
   transition: 0.5s;
   animation: fadeIn 0.5s;
   cursor: pointer;
   border-radius: 10px;
+  width: 330px;
+margin: 30px;
+
 }
 
 .post-card:hover {
-  box-shadow: 0 8px 16px 0 var(--green);
+  box-shadow: 0 8px 16px 0 var(--brand-blue);
 }
 
 .post-card img {
@@ -280,6 +258,10 @@ nav a.active {
 
 .post-card .title {
   margin: 0;
+}
+
+.post-card p {
+  font-size: 14px;
 }
 
 /* ---------- Avatar Styling ---------- */

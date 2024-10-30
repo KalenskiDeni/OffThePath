@@ -1,14 +1,30 @@
 import { NavLink } from "react-router-dom";
 
+
 export default function Nav() {
   return (
     <nav>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/create">Create Post</NavLink>
-      <NavLink to="/explore">Explore</NavLink>
-      <NavLink to="/match">Match</NavLink>
-      <NavLink to="/chat">Chat</NavLink>
-      <NavLink to="/profile">Profile</NavLink>
+      <NavLink to="/" exact activeClassName="active">
+        <i className="icon-home"></i>
+        <span>Home</span>
+      </NavLink>
+      <NavLink to="/explore" activeClassName="active">
+        <i className="icon-explore"></i>
+        <span>Explore</span>
+      </NavLink>
+      <NavLink to="/match" activeClassName="active">
+        <i className="icon-match"></i>
+        <span>Match</span>
+      </NavLink>
+      <NavLink to="/chat" activeClassName="active">
+        <i className="icon-chat"></i>
+        <span>Chat</span>
+      </NavLink>
+      <NavLink to="/profile" activeClassName="active">
+        <i className="icon-profile"></i>
+        <span>Profile</span>
+      </NavLink>
+     
     </nav>
   );
 }
