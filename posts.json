@@ -76,5 +76,84 @@
       "image": "https://plus.unsplash.com/premium_photo-1673657332512-b87806f4f49e?q=80&w=3372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "avatar": "https://images.unsplash.com/photo-1584650854920-c728d644c77f?q=80&w=1905&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
+  },
+
+
+  
+    "allChats": [
+      {
+        "name": "John Smith",
+        "message": "This trip was really nice...",
+        "time": "2:14 PM",
+        "unread": true,
+        "avatar": "https://images.unsplash.com/photo-1505068981102-ab0938cad78c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDQ3fHx8ZW58MHx8fHx8"
+      },
+      {
+        "name": "Amanda Davis",
+        "message": "Just got back from the beach!",
+        "time": "5:45 AM",
+        "unread": true,
+        "avatar": "https://plus.unsplash.com/premium_photo-1673151333256-a125a6bf1bce?q=80&w=3165&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        "name": "Sophia Martinez",
+        "message": "Can't believe how clear the water...",
+        "time": "3:30 AM",
+        "unread": false,
+        "avatar": "https://images.unsplash.com/photo-1663727727890-8b70e898f965?q=80&w=3165&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        "name": "Michael Brown",
+        "message": "Found a great local restaurant...",
+        "time": "Yesterday",
+        "unread": false,
+        "avatar": "https://images.unsplash.com/photo-1531141445733-14c2eb7d4c1f?q=80&w=3165&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        "name": "Lily Johnson",
+        "message": "We're hiking up the mountain...",
+        "time": "Yesterday",
+        "unread": false,
+        "avatar": "https://images.unsplash.com/photo-1599231091889-c1fd76b87226?q=80&w=2565&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        "name": "James Thompson",
+        "message": "Just landed in Bali! The weather...",
+        "time": "23 Oct",
+        "unread": false,
+        "avatar": "https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        "name": "Olivia Jensen",
+        "message": "The architecture here is incredible...",
+        "time": "21 Oct",
+        "unread": false,
+        "avatar": "https://images.unsplash.com/photo-1599457382197-820d65b8bbdc?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      }
+    ],
+    "matchChats": [
+      {
+        "name": "Amelia Roberts",
+        "message": "Check out the market on King...",
+        "time": "3:22 PM",
+        "unread": true,
+        "avatar": "https://images.unsplash.com/photo-1597976618063-810eb50c84fb?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        "name": "Daniel Parker",
+        "message": "The best time to visit the park...",
+        "time": "8:17 AM",
+        "unread": true,
+        "avatar": "https://images.unsplash.com/photo-1442328166075-47fe7153c128?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        "name": "Grace Evans",
+        "message": "If you want to experience the local...",
+        "time": "6:14 AM",
+        "unread": false,
+        "avatar": "https://images.unsplash.com/photo-1520310809185-5cc119cf8b08?q=80&w=1707&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      }
+    ]
   }
-}
+  
+
