@@ -1,11 +1,11 @@
-.page {
+.page1 {
     display: flex;
     justify-content: center; /* Center the page content */
     align-items: center; /* Center vertically if needed */
     height: 100vh; /* Full height to center the card vertically */
 }
 
-.container {
+.container1 {
     width: 100%; /* Full width of the container */
     padding: 20px; /* Add padding */
 }
@@ -21,7 +21,7 @@
     position: relative; /* Position relative for absolute children */
 }
 
-.avatar-container {
+.avatar1-container {
     overflow: hidden; /* Hide overflow to keep the avatar round */
     display: flex; /* Center the avatar inside */
     justify-content: center; /* Center the avatar */
@@ -30,7 +30,7 @@
     top: 20px; /* Position from the top */
 }
 
-.avatar {
+.avatar1 {
     width: 200px; /* Full width of the container */
     height: 200px;
     border-radius: 90%; /* Ensure the avatar itself is round */
