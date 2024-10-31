@@ -3,9 +3,11 @@ import "/src/styles/match.css";
 
 export default function MatchPage() {
     const [data, setData] = useState([]);
+    const [filteredData, setFilteredData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [selectedGenders, setSelectedGenders] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -26,11 +28,30 @@ export default function MatchPage() {
         fetchData();
     }, []);
 
+    useEffect(() => {
+        const applyFilter = () => {
+            if (selectedGenders.length === 0) {
+                setFilteredData(data); // Show all if no filter selected
+            } else {
+                setFilteredData(data.filter(local => selectedGenders.includes(local.gender)));
+            }
+            setCurrentIndex(0); // Reset to the first filtered profile
+        };
+
+        applyFilter();
+    }, [selectedGenders, data]);
+
+    const handleGenderChange = (gender) => {
+        setSelectedGenders(prev => 
+            prev.includes(gender) ? prev.filter(g => g !== gender) : [...prev, gender]
+        );
+    };
+
     const handleNext = (isAccepted) => {
         if (isAccepted) {
-            console.log(`Accepted: ${data[currentIndex].name}`);
+            console.log(`Accepted: ${filteredData[currentIndex].name}`);
         } else {
-            console.log(`Rejected: ${data[currentIndex].name}`);
+            console.log(`Rejected: ${filteredData[currentIndex].name}`);
         }
         
         setCurrentIndex(prevIndex => prevIndex + 1);
@@ -38,29 +59,56 @@ export default function MatchPage() {
 
     return (
         <section className="page1">
+            <div className="filter-section">
+                <label>
+                    <input
+                        type="checkbox"
+                        checked={selectedGenders.includes("female")}
+                        onChange={() => handleGenderChange("female")}
+                    />
+                    Female
+                </label>
+                <label>
+                    <input
+                        type="checkbox"
+                        checked={selectedGenders.includes("male")}
+                        onChange={() => handleGenderChange("male")}
+                    />
+                    Male
+                </label>
+                <label>
+                    <input
+                        type="checkbox"
+                        checked={selectedGenders.includes("other")}
+                        onChange={() => handleGenderChange("other")}
+                    />
+                    Other
+                </label>
+            </div>
+
             <div className="container1">
             
                 {loading && <p>Loading...</p>}
                 {error && <p>Error: {error}</p>}
 
-                {data.length > 0 && currentIndex < data.length ? (
+                {filteredData.length > 0 && currentIndex < filteredData.length ? (
                     <div className="local-card">
                         <div className="avatar1-container">
-                            <img src={data[currentIndex].avatar} alt={`${data[currentIndex].name}'s avatar`} className="avatar1" />
+                            <img src={filteredData[currentIndex].avatar} alt={`${filteredData[currentIndex].name}'s avatar`} className="avatar1" />
                         </div>
-                        <h3>{data[currentIndex].name}</h3>
+                        <h3>{filteredData[currentIndex].name}</h3>
                         <div className="info-row">
-                            <div>Age: {data[currentIndex].age}</div>
-                            <div>Location: {data[currentIndex].location}</div>
-                            <div>Interests: {data[currentIndex].interests.join(', ')}</div>
+                            <div>Age: {filteredData[currentIndex].age}</div>
+                            <div>Location: {filteredData[currentIndex].location}</div>
+                            <div>Interests: {filteredData[currentIndex].interests.join(', ')}</div>
                         </div>
-                        <p>{data[currentIndex].about}</p>
+                        <p>{filteredData[currentIndex].about}</p>
                     </div>
                 ) : (
-                    <p>You have run out of matches for today!</p>
+                    <p>No more locals available.</p>
                 )}
                 
-                {currentIndex < data.length && (
+                {currentIndex < filteredData.length && (
                     <div className="button-container">
                         <button onClick={() => handleNext(false)}>No</button>
                         <button onClick={() => handleNext(true)}>Yes</button>
