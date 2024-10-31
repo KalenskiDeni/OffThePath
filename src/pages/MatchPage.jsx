@@ -3,6 +3,8 @@ import "/src/styles/match.css";
 import location from "../assets/icons/location.svg";
 import age from "../assets/icons/birthday.svg";
 import interests from "../assets/icons/interests.svg";
+import matchYES from "../assets/icons/match-YES.svg";
+import matchNO from "../assets/icons/match-NO.svg";
 
 export default function MatchPage() {
   const [data, setData] = useState([]);
@@ -146,8 +148,12 @@ export default function MatchPage() {
 
         {currentIndex < filteredData.length && (
           <div className="button-container">
-            <button onClick={() => handleNext(false)}>No</button>
-            <button onClick={() => handleNext(true)}>Yes</button>
+            <button onClick={() => handleNext(false)}>
+              <img src={matchNO} alt="NO" className="iconM" />{" "}
+            </button>
+            <button onClick={() => handleNext(true)}>
+              <img src={matchYES} alt="YES" className="iconM" />{" "}
+            </button>
           </div>
         )}
       </div>
