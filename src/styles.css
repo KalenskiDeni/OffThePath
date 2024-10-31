@@ -1,10 +1,10 @@
 /* ---------- Root Variables ---------- */
 :root {
   --brand-blue: #216869;
-  --brand-white:#F7F7F7;
-  --brand-dark-blue:#182726;
-  --brand-black:#121312;
-  --brand-light-gray: #D1CFC9;
+  --brand-white: #f7f7f7;
+  --brand-dark-blue: #182726;
+  --brand-black: #121312;
+  --brand-light-gray: #d1cfc9;
   --text-color-light: #f1f1f1;
   --white: #f1f1f1;
 }
@@ -22,9 +22,9 @@ html {
 
 body,
 html {
-  background-color: var(--Brand-white, #F7F7F7);;
+  background-color: var(--Brand-white, #f7f7f7);
   color: var(--brand-black);
-  font-family: 'Poppins', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   height: 100%;
   line-height: 1.5;
@@ -154,21 +154,18 @@ form {
   margin: 1em 0;
 }
 
-
-
 .create-post-button {
-  margin-top: 40px; 
-  margin-left: 30px; 
-  
-  background-color: #ffffff; 
-  color: white; 
-  border: 2px solid #959595; 
-  border-radius: 25px; 
-  padding: 15px 20px; 
-  font-size: 16px; 
-  cursor: pointer; 
+  margin-top: 40px;
+  margin-left: 30px;
+
+  background-color: #ffffff;
+  color: white;
+  border: 2px solid #959595;
+  border-radius: 25px;
+  padding: 15px 20px;
+  font-size: 16px;
+  cursor: pointer;
   width: 330px;
-  
 }
 
 .create-button-text {
@@ -180,11 +177,10 @@ form {
   margin-bottom: 20px; /* Adjust as needed */
 }
 
-.btn-cancel, .btn {
+.btn-cancel,
+.btn {
   margin-bottom: 100px; /* Adds space below each button */
-  
 }
-
 
 /* ---------- Navigation Styling ---------- */
 nav {
@@ -197,7 +193,6 @@ nav {
   right: 0;
   padding: 0.5em 0;
   border-top: 1px rgb(78, 78, 78);
-
 }
 
 nav a {
@@ -209,8 +204,6 @@ nav a {
   font-weight: 500;
   font-size: 0.9em;
   padding: 8px;
-  
-
 }
 
 nav a span {
@@ -222,9 +215,6 @@ nav a i {
   font-size: 1.5em;
 }
 
-
-
-
 /* ---------- Post Card Styling ---------- */
 .post-card {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
@@ -235,8 +225,7 @@ nav a i {
   cursor: pointer;
   border-radius: 10px;
   width: 330px;
-margin: 30px;
-
+  margin: 30px;
 }
 
 .post-card:hover {
@@ -330,4 +319,3 @@ margin: 30px;
     opacity: 1;
   }
 }
-

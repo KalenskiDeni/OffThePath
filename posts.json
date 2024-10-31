@@ -169,6 +169,14 @@
     "Varna": {
       "location": "Varna, Bulgaria",
       "photo": "https://images.unsplash.com/photo-1697831447294-ca0f55c2bc42?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmFybmElMjBidWxnYXJpYXxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    "Paris": {
+      "location": "Paris, France",
+      "photo": "https://images.unsplash.com/photo-1697831447294-ca0f55c2bc42?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmFybmElMjBidWxnYXJpYXxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    "New York": {
+      "location": "Paris, France",
+      "photo": "https://images.unsplash.com/photo-1697831447294-ca0f55c2bc42?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmFybmElMjBidWxnYXJpYXxlbnwwfHwwfHx8MA%3D%3D"
     }
   }
 }
