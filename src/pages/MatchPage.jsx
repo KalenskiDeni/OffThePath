@@ -8,6 +8,7 @@ export default function MatchPage() {
     const [error, setError] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedGenders, setSelectedGenders] = useState([]);
+    const [isGenderDropdownOpen, setIsGenderDropdownOpen] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -31,18 +32,18 @@ export default function MatchPage() {
     useEffect(() => {
         const applyFilter = () => {
             if (selectedGenders.length === 0) {
-                setFilteredData(data); // Show all if no filter selected
+                setFilteredData(data);
             } else {
                 setFilteredData(data.filter(local => selectedGenders.includes(local.gender)));
             }
-            setCurrentIndex(0); // Reset to the first filtered profile
+            setCurrentIndex(0);
         };
 
         applyFilter();
     }, [selectedGenders, data]);
 
     const handleGenderChange = (gender) => {
-        setSelectedGenders(prev => 
+        setSelectedGenders(prev =>
             prev.includes(gender) ? prev.filter(g => g !== gender) : [...prev, gender]
         );
     };
@@ -59,35 +60,47 @@ export default function MatchPage() {
 
     return (
         <section className="page1">
-            <div className="filter-section">
-                <label>
-                    <input
-                        type="checkbox"
-                        checked={selectedGenders.includes("female")}
-                        onChange={() => handleGenderChange("female")}
-                    />
-                    Female
-                </label>
-                <label>
-                    <input
-                        type="checkbox"
-                        checked={selectedGenders.includes("male")}
-                        onChange={() => handleGenderChange("male")}
-                    />
-                    Male
-                </label>
-                <label>
-                    <input
-                        type="checkbox"
-                        checked={selectedGenders.includes("other")}
-                        onChange={() => handleGenderChange("other")}
-                    />
-                    Other
-                </label>
-            </div>
+            {filteredData.length > 0 && currentIndex < filteredData.length && (
+                <div className="filter-section">
+                    <button
+                        className="filter-button"
+                        onClick={() => setIsGenderDropdownOpen(prev => !prev)}
+                    >
+                        Gender
+                    </button>
+                    
+                    {isGenderDropdownOpen && (
+                        <div className="dropdown-options">
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    checked={selectedGenders.includes("female")}
+                                    onChange={() => handleGenderChange("female")}
+                                />
+                                Female
+                            </label>
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    checked={selectedGenders.includes("male")}
+                                    onChange={() => handleGenderChange("male")}
+                                />
+                                Male
+                            </label>
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    checked={selectedGenders.includes("other")}
+                                    onChange={() => handleGenderChange("other")}
+                                />
+                                Other
+                            </label>
+                        </div>
+                    )}
+                </div>
+            )}
 
             <div className="container1">
-            
                 {loading && <p>Loading...</p>}
                 {error && <p>Error: {error}</p>}
 
