@@ -1,3 +1,6 @@
+import React from 'react';
+import '/src/styles/explore.css';
+
 export default function ExplorePage() {
   return (
     <section className="page">

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 
+import '/src/styles/chat.css';
 
 export default function ChatPage() {
     const [activeTab, setActiveTab] = useState("all");

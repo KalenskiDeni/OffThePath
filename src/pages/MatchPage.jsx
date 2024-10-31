@@ -1,3 +1,7 @@
+import React from 'react';
+import '/src/styles/match.css';
+
+
 export default function MatchPage() {
     return (
       <section className="page">
