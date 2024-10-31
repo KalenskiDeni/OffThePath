@@ -1,7 +1,6 @@
-import React from "react";
-import "/src/styles/profile.css";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import "/src/styles/profile.css";
 
 export default function UpdatePage() {
   const [content, setContent] = useState("");
@@ -89,7 +88,12 @@ export default function UpdatePage() {
           <img
             id="image-preview"
             className="image-preview"
-            src={
-              image
-                ? image
-              
+            src={image || "placeholder-image-url"} // Provide a default image or placeholder URL
+            alt="Image Preview"
+          />
+          <button type="submit">Update Post</button>
+        </form>
+      </div>
+    </section>
+  );
+}
