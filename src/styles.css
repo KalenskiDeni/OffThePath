@@ -175,6 +175,17 @@ form {
   color: var(--brand-light-gray);
 }
 
+.btns {
+  gap: 10px; /* Space between the buttons */
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.btn-cancel, .btn {
+  margin-bottom: 100px; /* Adds space below each button */
+  
+}
+
+
 /* ---------- Navigation Styling ---------- */
 nav {
   background-color: var(--brand-white);
@@ -210,8 +221,6 @@ nav a span {
 nav a i {
   font-size: 1.5em;
 }
-
-
 
 
 
