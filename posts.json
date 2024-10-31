@@ -31,6 +31,7 @@
 
   "locals": {
     "Albert": {
+      "gender": "male",
       "avatar": "https://plus.unsplash.com/premium_photo-1670985849576-175bab7fe0e4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "name": "Albert",
       "location": "Madrid, Spain",
@@ -42,6 +43,7 @@
       "background-image": "https://images.unsplash.com/photo-1553697069-44bab35c1738?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     "Luis": {
+      "gender": "other",
       "avatar": "https://images.unsplash.com/photo-1533621834623-d0b25d0b14e7?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "name": "Luis",
       "location": "Rome, Italy",
@@ -53,6 +55,7 @@
       "background-image": "https://images.unsplash.com/photo-1691287850810-00fe9fa14c28?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     "Lucia": {
+      "gender": "female",
       "avatar": "https://images.unsplash.com/photo-1484608856193-968d2be4080e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "name": "Lucia",
       "location": "NYC, USA",
