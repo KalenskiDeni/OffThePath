@@ -15,7 +15,7 @@ export default function MatchPage() {
                     throw new Error('Network response was not ok');
                 }
                 const result = await response.json();
-                setData(Object.values(result)); // Convert the object to an array
+                setData(Object.values(result));
             } catch (err) {
                 setError(err.message);
             } finally {
@@ -33,12 +33,7 @@ export default function MatchPage() {
             console.log(`Rejected: ${data[currentIndex].name}`);
         }
         
-        setCurrentIndex(prevIndex => {
-            if (prevIndex < data.length - 1) {
-                return prevIndex + 1;
-            }
-            return prevIndex; // Stay on the last local if at the end
-        });
+        setCurrentIndex(prevIndex => prevIndex + 1);
     };
 
     return (
@@ -47,6 +42,7 @@ export default function MatchPage() {
             
                 {loading && <p>Loading...</p>}
                 {error && <p>Error: {error}</p>}
+
                 {data.length > 0 && currentIndex < data.length ? (
                     <div className="local-card">
                         <div className="avatar1-container">
@@ -61,13 +57,15 @@ export default function MatchPage() {
                         <p>{data[currentIndex].about}</p>
                     </div>
                 ) : (
-                    <p>No more locals available.</p>
+                    <p>You have run out of matches for today!</p>
                 )}
                 
-                <div className="button-container">
-                    <button onClick={() => handleNext(false)}>No</button>
-                    <button onClick={() => handleNext(true)}>Yes</button>
-                </div>
+                {currentIndex < data.length && (
+                    <div className="button-container">
+                        <button onClick={() => handleNext(false)}>No</button>
+                        <button onClick={() => handleNext(true)}>Yes</button>
+                    </div>
+                )}
             </div>
         </section>
     );
