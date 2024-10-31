@@ -114,11 +114,16 @@ export default function MatchPage() {
                         <div className="info-row">
                             <div>Age: {filteredData[currentIndex].age}</div>
                             <div>
+
+                            {/* HEREEEEEEEEE */}
                             <img 
                              src={location} 
                             alt="Location" 
                             className="iconM" 
                             />
+
+
+
                                {filteredData[currentIndex].location}</div>
                             <div>Interests: {filteredData[currentIndex].interests.join(', ')}</div>
                         </div>
