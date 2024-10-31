@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PostCard from "../components/PostCard";
+import ExploreCard from "../components/ExploreCard";
 import "/src/styles/explore.css";
 
 export default function ExplorePage() {
@@ -28,7 +28,7 @@ export default function ExplorePage() {
     <section className="page">
       <div className="grid">
         {posts.map((post) => (
-          <PostCard key={post.id} post={post} />
+          <ExploreCard key={post.id} post={post} />
         ))}
       </div>
     </section>
