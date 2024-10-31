@@ -42,15 +42,15 @@ export default function MatchPage() {
     };
 
     return (
-        <section className="page">
-            <div className="container">
+        <section className="page1">
+            <div className="container1">
             
                 {loading && <p>Loading...</p>}
                 {error && <p>Error: {error}</p>}
                 {data.length > 0 && currentIndex < data.length ? (
                     <div className="local-card">
-                        <div className="avatar-container">
-                            <img src={data[currentIndex].avatar} alt={`${data[currentIndex].name}'s avatar`} className="avatar" />
+                        <div className="avatar1-container">
+                            <img src={data[currentIndex].avatar} alt={`${data[currentIndex].name}'s avatar`} className="avatar1" />
                         </div>
                         <h3>{data[currentIndex].name}</h3>
                         <div className="info-row">
