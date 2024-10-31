@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ExploreCard from "../components/ExploreCard";
 import "/src/styles/explore.css";
+import "/src/styles.css";
 
 export default function ExplorePage() {
   const [posts, setPosts] = useState([]); // set the initial state to an empty array
@@ -26,7 +27,7 @@ export default function ExplorePage() {
 
   return (
     <section className="page">
-      <div className="grid">
+      <div className="card-container">
         {posts.map((post) => (
           <ExploreCard key={post.id} post={post} />
         ))}
