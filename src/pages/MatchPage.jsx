@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "/src/styles/match.css";
+import location from '../assets/icons/location.svg';
 
 export default function MatchPage() {
     const [data, setData] = useState([]);
@@ -112,7 +113,13 @@ export default function MatchPage() {
                         <h3>{filteredData[currentIndex].name}</h3>
                         <div className="info-row">
                             <div>Age: {filteredData[currentIndex].age}</div>
-                            <div>Location: {filteredData[currentIndex].location}</div>
+                            <div>
+                            <img 
+                             src={location} 
+                            alt="Location" 
+                            className="iconM" 
+                            />
+                               {filteredData[currentIndex].location}</div>
                             <div>Interests: {filteredData[currentIndex].interests.join(', ')}</div>
                         </div>
                         <p>{filteredData[currentIndex].about}</p>
