@@ -25,11 +25,58 @@
 }
 
 .countries-stats {
-    color: var(--brand-white);
-    position: absolute;
-    top: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, sans-serif;
+
    
-}
+  }
+  
+  .stat {
+    text-align: center;
+    margin-top: 570px;
+  }
+  
+  .stat-number {
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold;
+
+  }
+  
+  .stat-label {
+    font-size: 1rem;
+    color: #a0a0a0; /* Light gray color for the label */
+
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 16px; /* Adjust spacing as needed */
+    flex-direction: column;
+    margin-top: 570px;
+    margin-left: -7px;
+  }
+  
+  .divider hr {
+    width: 1px;
+    height: 40px; /* Adjust height as needed */
+    background-color: white;
+    border: none;
+    margin: 0 52px;
+  }
+  
+  .arrow-icon {
+    margin-top: 8px; /* Space between divider and arrow icon */
+    width: 36px;
+    height: 36px; /* Adjust size as needed */
+    margin-left: 0px;
+
+  }
+  
 
 /* Profile Info Section */
 .profile-info {
