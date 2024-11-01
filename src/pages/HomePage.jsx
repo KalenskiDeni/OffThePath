@@ -1,5 +1,7 @@
+// HomePage.js
 import { useEffect, useState } from "react";
 import PostCard from "../components/PostCard";
+import Stories from "../components/Stories"; // Import Stories component
 import { NavLink } from "react-router-dom";
 import "/src/styles/homepage.css";
 
@@ -57,6 +59,9 @@ export default function HomePage() {
                 </span>
               </NavLink>
             </div>
+
+            {/* Stories Component */}
+            <Stories />
 
             {/* Posts Grid */}
             <div className="grid">

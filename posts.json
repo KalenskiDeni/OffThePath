@@ -69,12 +69,12 @@
   },
 
   "stories": {
-    "1": {
+    "0": {
       "name": "John Smith",
       "image": "https://plus.unsplash.com/premium_photo-1677343210638-5d3ce6ddbf85?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "avatar": "https://plus.unsplash.com/premium_photo-1670985849576-175bab7fe0e4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
-    "2": {
+    "1": {
       "name": "Amanda Davis",
       "image": "https://plus.unsplash.com/premium_photo-1673657332512-b87806f4f49e?q=80&w=3372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "avatar": "https://images.unsplash.com/photo-1584650854920-c728d644c77f?q=80&w=1905&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
