@@ -30,7 +30,9 @@ html {
   line-height: 1.5;
   margin: 0;
   padding: 0;
+
 }
+
 
 /* ---------- Typography ---------- */
 h1 {
@@ -156,24 +158,71 @@ form {
 
 
 
-.create-post-button {
-  margin-top: 20px; 
-  margin-left: 30px; 
-  
-  border-radius: var(--M, 16px) 8px 8px var(--M, 16px);
-background: var(--brand-white-50, rgba(247, 247, 247, 0.50));
-box-shadow: 1px 1px 8px 0px var(--brand-light-gray-50, rgba(209, 207, 201, 0.50));
-  border-radius: 8px; 
-  padding: 15px 20px; 
-  font-size: 12px; 
-  cursor: pointer; 
-  width: 330px;
-  
-}
 
 .create-button-text {
   color: var(--brand-light-gray);
 }
+
+
+.create-post-button {
+  padding: 15px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  
+}
+
+.create-post-box {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 15px 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+margin-left: -42px;
+  width: 133%;
+  text-decoration: none; /* Removes underline from NavLink */
+
+
+
+}
+
+.search-avatar {
+  width: 40px; /* Adjust the avatar size */
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.placeholder-text {
+  font-size: 12px;
+  color: #b0b0b0; /* Adjust color to match your design */
+  flex-grow: 1;
+
+}
+
+
+
+
+.text1-stories {
+  color: var(--Brand-dark-blue, #182726);
+/* H1 */
+font-family: Poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-left: 27px;
+
+}
+
+
+
+
+
+
 
 .btns {
   gap: 10px; /* Space between the buttons */
@@ -267,6 +316,7 @@ margin-top: 40px;
 
 
 
+
 }
 
 
@@ -274,8 +324,6 @@ margin-top: 40px;
 .post-card:hover {
   box-shadow: 0 8px 16px 0 var(--brand-blue);
 }
-
-
 
 
 
@@ -356,6 +404,9 @@ margin-bottom: 12px;
   padding: 10px;
   border-top: 1px solid #e0e0e0;
 }
+
+
+
 
 .reaction-group-left, .reaction-group-right {
   display: flex;
@@ -475,6 +526,7 @@ margin-bottom: 12px;
   padding: 23px;
   overflow-x: auto;
   margin-bottom: -33px;
+  margin-top: -17px;
 }
 
 .story {

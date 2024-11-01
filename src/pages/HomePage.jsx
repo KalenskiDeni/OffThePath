@@ -4,6 +4,7 @@ import PostCard from "../components/PostCard";
 import Stories from "../components/Stories"; // Import Stories component
 import { NavLink } from "react-router-dom";
 import "/src/styles/homepage.css";
+import avatarImage from "../assets/story-alex.png";
 
 export default function HomePage() {
   const [posts, setPosts] = useState([]);
@@ -51,15 +52,19 @@ export default function HomePage() {
         {activeTab === "forYou" && (
           <>
             {/* Create Post Button */}
-            <div className="create-post-button">
-              <NavLink to="/create" activeClassName="active">
-                <i className="icon-create"></i>
-                <span className="create-button-text">
-                  Tell us about your latest adventure...
-                </span>
-              </NavLink>
-            </div>
-
+      <div className="create-post-button">
+        <NavLink to="/create" activeClassName="active">
+          <div className="create-post-box">
+            <img src={avatarImage} alt="User avatar" className="search-avatar" />
+            <span className="placeholder-text">
+              Tell us about your latest adventure...
+            </span>
+          </div>
+        </NavLink>
+      </div>
+      <span className="text1-stories">
+              Stories
+            </span>
             {/* Stories Component */}
             <Stories />
 
