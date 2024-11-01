@@ -1,6 +1,7 @@
 import React from "react";
 import "/src/styles/profile.css";
 
+import globeIcon from "../assets/icons/globe-icon.png";
 import arrowIcon from "../assets/icons/arrow-icon.svg";
 import languageIcon from "../assets/icons/flag/DK.svg";
 import verificationIcon from "../assets/icons/verification-icon.svg";
@@ -13,31 +14,31 @@ import travelIcon from "../assets/icons/travel-icon.png";
 export default function ProfilePage() {
   return (
     <section className="profile-page">
-
-
       <div className="earth-section">
-
-
         <div className="earth-image">
-        <div className="countries-stats">
-      <div className="stat">
-        <p className="stat-number">1 / 202</p>
-        <p className="stat-label">countries been</p>
-      </div>
+          <div className="countries-stats">
+            <div className="stat">
+              <p className="stat-number">1 / 202</p>
+              <p className="stat-label">countries been</p>
+            </div>
 
-      <div className="divider">
-        <hr />
-        <img src={arrowIcon} alt="Arrow Icon" className="arrow-icon" />
-      </div>
+            <div className="divider">
+              <hr />
+              <img src={arrowIcon} alt="Arrow Icon" className="arrow-icon" />
+            </div>
 
-      <div className="stat">
-        <p className="stat-number">0%</p>
-        <p className="stat-label">of the world</p>
-      </div>
-    </div>
+            <div className="stat">
+              <p className="stat-number">0%</p>
+              <p className="stat-label">of the world</p>
+            </div>
+          </div>
         </div>
       </div>
 
+      <div className="your-countries-button">
+      <img src={globeIcon} alt="Globe Icon" className="icon" />
+      <span>Your countries</span>
+    </div>
 
       <div className="profile-info">
         <div className="profile-header">
@@ -48,9 +49,13 @@ export default function ProfilePage() {
           </div>
           <h2>Alex, 21</h2>
           <div className="language-display">
-      <img src={languageIcon} alt="Language Icon" className="language-icon" />
-      <p>Danish</p>
-    </div>
+            <img
+              src={languageIcon}
+              alt="Language Icon"
+              className="language-icon"
+            />
+            <p>Danish</p>
+          </div>
         </div>
 
         <button className="action-btn">View Profile</button>
