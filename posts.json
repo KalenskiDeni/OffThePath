@@ -4,7 +4,7 @@
       "caption": "Such a great cultural day today! I visited the National Museum of History, it was absolutely amazing!",
       "image": "https://plus.unsplash.com/premium_photo-1697729828374-96545e9e26be?q=80&w=1816&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "time": "12 min ago",
-      "hashtags": "#museum, #culture",
+      "hashtags": ["#museum ", "#culture"],
       "location": "Madrid, Spain",
       "uid": "John"
     },
@@ -12,7 +12,7 @@
       "caption": "Just spent the last few days exploring Bali, and I am completely blown away! The beaches are stunning, but it is the hidden temples and lush rice terraces that really made my solo trip unforgettable. I met some locals who showed me around Ubud, and the food? Incredible.",
       "image": "https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "time": "7 h ago",
-      "hashtags": "#nature, #culture",
+      "hashtags": ["#nature ", "#culture"],
       "location": "Bali, Indonesia",
       "uid": "Amanda"
     }
