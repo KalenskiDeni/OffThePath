@@ -93,14 +93,23 @@ export default function MatchPage() {
 
     const toggleGenderDropdown = () => {
         setActiveFilter(activeFilter === 'gender' ? null : 'gender');
+        if (activeFilter === 'age' || activeFilter === 'interests') {
+            setActiveFilter('gender');
+        }
     };
 
     const toggleAgeDropdown = () => {
         setActiveFilter(activeFilter === 'age' ? null : 'age');
+        if (activeFilter === 'gender' || activeFilter === 'interests') {
+            setActiveFilter('age');
+        }
     };
 
     const toggleInterestsDropdown = () => {
         setActiveFilter(activeFilter === 'interests' ? null : 'interests');
+        if (activeFilter === 'gender' || activeFilter === 'age') {
+            setActiveFilter('interests');
+        }
     };
 
     // Check if no locals match the filters or if all locals have been viewed
@@ -112,115 +121,123 @@ export default function MatchPage() {
             {!allLocalsViewed && (
                 <div className="filter-section">
                     {/* Gender Filter Dropdown */}
-                    <button
-                        className="filter-button"
-                        onClick={toggleGenderDropdown}
-                    >
-                        Gender
-                    </button>
+                    <div className="filter-container">
+                        <button
+                            className="filter-button"
+                            onClick={toggleGenderDropdown}
+                        >
+                            Gender
+                        </button>
 
-                    {activeFilter === 'gender' && (
-                        <div className="dropdown-options">
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    checked={selectedGenders.includes("female")}
-                                    onChange={() => handleGenderChange("female")}
-                                />
-                                Female
-                            </label>
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    checked={selectedGenders.includes("male")}
-                                    onChange={() => handleGenderChange("male")}
-                                />
-                                Male
-                            </label>
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    checked={selectedGenders.includes("other")}
-                                    onChange={() => handleGenderChange("other")}
-                                />
-                                Other
-                            </label>
-                        </div>
-                    )}
-
-                    {/* Age Filter Dropdown */}
-                    <button
-                        className="filter-button"
-                        onClick={toggleAgeDropdown}
-                    >
-                        Age
-                    </button>
-
-                    {activeFilter === 'age' && (
-                        <div className="age-range-dropdown">
-                            <h3>Age Range: {ageRange[0]} - {ageRange[1]}</h3>
-                            <Range
-                                step={1}
-                                min={18}
-                                max={100}
-                                values={ageRange}
-                                onChange={(values) => setAgeRange(values)}
-                                renderTrack={({ props, children }) => (
-                                    <div
-                                        {...props}
-                                        style={{
-                                            ...props.style,
-                                            height: "6px",
-                                            width: "100%",
-                                            backgroundColor: "#ddd",
-                                            borderRadius: "4px",
-                                            position: "relative"
-                                        }}
-                                    >
-                                        {children}
-                                    </div>
-                                )}
-                                renderThumb={({ props }) => (
-                                    <div
-                                        {...props}
-                                        style={{
-                                            ...props.style,
-                                            height: "20px",
-                                            width: "20px",
-                                            backgroundColor: "#333",
-                                            borderRadius: "50%"
-                                        }}
-                                    />
-                                )}
-                            />
-                            <button onClick={handleApplyAgeFilter} className="apply-filter-button">
-                                Apply Filter
-                            </button>
-                        </div>
-                    )}
-
-                    {/* Interests Filter Dropdown */}
-                    <button
-                        className="filter-button"
-                        onClick={toggleInterestsDropdown}
-                    >
-                        Activities
-                    </button>
-
-                    {activeFilter === 'interests' && (
-                        <div className="dropdown-options">
-                            {uniqueInterests.map((interest, index) => (
-                                <label key={index}>
+                        {activeFilter === 'gender' && (
+                            <div className="dropdown-options">
+                                <label>
                                     <input
                                         type="checkbox"
-                                        checked={selectedInterests.includes(interest)}
-                                        onChange={() => handleInterestChange(interest)}
+                                        checked={selectedGenders.includes("female")}
+                                        onChange={() => handleGenderChange("female")}
                                     />
-                                    {interest}
+                                    Female
                                 </label>
-                            ))}
-                        </div>
-                    )}
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        checked={selectedGenders.includes("male")}
+                                        onChange={() => handleGenderChange("male")}
+                                    />
+                                    Male
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        checked={selectedGenders.includes("other")}
+                                        onChange={() => handleGenderChange("other")}
+                                    />
+                                    Other
+                                </label>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Age Filter Dropdown */}
+                    <div className="filter-container">
+                        <button
+                            className="filter-button"
+                            onClick={toggleAgeDropdown}
+                        >
+                            Age
+                        </button>
+
+                        {activeFilter === 'age' && (
+                            <div className="age-range-dropdown">
+                                <h5>Age Range: {ageRange[0]} - {ageRange[1]}</h5>
+                                <div className="slider-container">
+                                    <Range
+                                        step={1}
+                                        min={18}
+                                        max={100}
+                                        values={ageRange}
+                                        onChange={(values) => setAgeRange(values)}
+                                        renderTrack={({ props, children }) => (
+                                            <div
+                                                {...props}
+                                                style={{
+                                                    ...props.style,
+                                                    height: "6px",
+                                                    width: "100%",
+                                                    backgroundColor: "#ddd",
+                                                    borderRadius: "4px",
+                                                    position: "relative"
+                                                }}
+                                            >
+                                                {children}
+                                            </div>
+                                        )}
+                                        renderThumb={({ props }) => (
+                                            <div
+                                                {...props}
+                                                style={{
+                                                    ...props.style,
+                                                    height: "20px",
+                                                    width: "20px",
+                                                    backgroundColor: "#333",
+                                                    borderRadius: "50%"
+                                                }}
+                                            />
+                                        )}
+                                    />
+                                </div>
+                                <button onClick={handleApplyAgeFilter} className="apply-filter-button">
+                                    Apply Filter
+                                </button>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Interests Filter Dropdown */}
+                    <div className="filter-container">
+                        <button
+                            className="filter-button"
+                            onClick={toggleInterestsDropdown}
+                        >
+                            Activities
+                        </button>
+
+                        {activeFilter === 'interests' && (
+                            <div className="dropdown-options">
+                                {uniqueInterests.map((interest, index) => (
+                                    <label key={index}>
+                                        <input
+                                            type="checkbox"
+                                            checked={selectedInterests.includes(interest)}
+                                            onChange={() => handleInterestChange(interest)}
+                                        />
+                                        {interest}
+                                    </label>
+                                ))}
+                            </div>
+                        )}
+                    </div>
                 </div>
             )}
 
@@ -262,13 +279,13 @@ export default function MatchPage() {
                     </p>
                 )}
 
-                {currentIndex < filteredData.length && (
+                {!allLocalsViewed && currentIndex < filteredData.length && (
                     <div className="button-container">
                         <button onClick={() => handleNext(false)}>
-                            <img src={matchNO} alt="NO" className="iconM" />{" "}
+                            <img src={matchNO} alt="NO" className="iconM" />
                         </button>
                         <button onClick={() => handleNext(true)}>
-                            <img src={matchYES} alt="YES" className="iconM" />{" "}
+                            <img src={matchYES} alt="YES" className="iconM" />
                         </button>
                     </div>
                 )}
