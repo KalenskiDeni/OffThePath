@@ -182,7 +182,7 @@ form {
 
 .btn-cancel, .btn {
   margin-bottom: 100px; /* Adds space below each button */
-  
+
 }
 
 
@@ -237,11 +237,19 @@ nav a i {
   width: 330px;
 margin: 30px;
 
+
+
 }
+
 
 .post-card:hover {
   box-shadow: 0 8px 16px 0 var(--brand-blue);
 }
+
+
+
+
+
 
 .post-card img {
   width: 100%;
@@ -261,6 +269,9 @@ margin: 30px;
 .post-card p {
   font-size: 14px;
 }
+
+
+
 
 /* ---------- Avatar Styling ---------- */
 .avatar {
