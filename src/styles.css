@@ -157,7 +157,7 @@ form {
 
 
 .create-post-button {
-  margin-top: 40px; 
+  margin-top: 20px; 
   margin-left: 30px; 
   
   background-color: #ffffff; 
@@ -165,7 +165,7 @@ form {
   border: 2px solid #959595; 
   border-radius: 25px; 
   padding: 15px 20px; 
-  font-size: 16px; 
+  font-size: 12px; 
   cursor: pointer; 
   width: 330px;
   
@@ -225,6 +225,34 @@ nav a i {
 
 
 
+
+
+.tab-buttons-home {
+  margin-top: 90px;
+  display: flex;
+
+  padding: 0 25px;
+}
+
+.tab-buttons-home button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 16px;
+  background-color: #e0e0e0;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+.tab-buttons-home button.active {
+  background-color: var(--brand-blue); /* Change to your accent color */
+  color: white;
+}
+
+
+
+
 /* ---------- Post Card Styling ---------- */
 .post-card {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
@@ -235,15 +263,12 @@ nav a i {
   cursor: pointer;
   border-radius: 10px;
   width: 330px;
-<<<<<<< Updated upstream
 margin: 30px;
 
 
 
-=======
-  margin: 30px;
->>>>>>> Stashed changes
 }
+
 
 
 .post-card:hover {
