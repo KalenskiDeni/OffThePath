@@ -262,8 +262,8 @@ nav a i {
   animation: fadeIn 0.5s;
   cursor: pointer;
   border-radius: 10px;
-  width: 330px;
-margin: 30px;
+
+margin-top: 40px;
 
 
 
@@ -289,6 +289,7 @@ margin: 30px;
 
 .post-card h2 {
   margin: 0.5em 0 0;
+
 }
 
 .post-card .title {
@@ -299,6 +300,94 @@ margin: 30px;
   font-size: 14px;
 }
 
+.location {
+margin-left: 67px;
+margin-top: -33px;
+font-weight: 350;
+font-size: 12px;
+}
+
+.time {
+  color: #989898;
+/* Body S light */
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+margin-left: 290px;
+margin-top: -44px;
+}
+
+.caption {
+  color: var(--Brand-black, #121312);
+
+/* Body light */
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+width: 360px;
+margin-bottom: 10px;
+}
+
+
+.hashtags {
+  color: var(--brand-black-50, rgba(18, 19, 18, 0.50));
+/* Body S light */
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+margin-top: 5px;
+margin-bottom: 12px;
+}
+
+
+/* Reactions */
+
+.reaction-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.reaction-group-left, .reaction-group-right {
+  display: flex;
+  gap: 15px; 
+}
+
+.reaction-button {
+  background: none !important;
+  border: none !important;
+  text-decoration: none !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: none;
+  padding: 0;
+  box-shadow: none;
+  cursor: pointer;
+  margin-bottom: -16px;
+}
+
+.reaction-button img {
+  width: 20px; 
+  height: 20px;
+}
+
+.reaction-button p {
+  color: var(--Brand-black, #121312);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
 
 
 
