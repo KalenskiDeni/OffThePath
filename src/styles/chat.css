@@ -88,10 +88,12 @@
   .unread-badge {
     background-color: var(--brand-blue); /* Unread badge color */
     color: white;
-    font-size: 0.7em;
-    padding: 2px 5px;
+    font-size: 0.65em;
+    padding: 0px 6px;
     border-radius: 50%;
-    margin-left: 4px;
+    margin-left: 7px;
+
+
   }
   
   

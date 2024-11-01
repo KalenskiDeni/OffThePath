@@ -3,7 +3,6 @@ import '/src/styles/profile.css';
 
 
 
-
 export default function ProfilePage() {
     return (
       <section className="profile-page">
