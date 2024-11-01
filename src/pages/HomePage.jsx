@@ -1,18 +1,12 @@
 import { useEffect, useState } from "react";
 import PostCard from "../components/PostCard";
 import { NavLink } from "react-router-dom";
-import '/src/styles/homepage.css';
-
-
+import "/src/styles/homepage.css";
 
 export default function HomePage() {
   const [posts, setPosts] = useState([]);
   // Fetch data from the API
 
- 
-
-
-  
   useEffect(() => {
     async function fetchPosts() {
       const url =
@@ -21,9 +15,9 @@ export default function HomePage() {
       const data = await response.json(); // JSON.parse(response)
       console.log(data);
       // from object to array
-      const postsArray = Object.keys(data).map(postId => ({
+      const postsArray = Object.keys(data).map((postId) => ({
         id: postId,
-        ...data[postId]
+        ...data[postId],
       }));
       console.log(postsArray);
       setPosts(postsArray);
@@ -33,16 +27,17 @@ export default function HomePage() {
   }, []);
 
   return (
-    
     <section className="page">
-        <div className="create-post-button">
+      <div className="create-post-button">
         <NavLink to="/create" activeClassName="active">
           <i className="icon-create"></i>
-          <span class="create-button-text">Tell us about your latest adventure...</span>
+          <span className="create-button-text">
+            Tell us about your latest adventure...
+          </span>
         </NavLink>
       </div>
       <div className="grid">
-        {posts.map(post => (
+        {posts.map((post) => (
           <PostCard key={post.id} post={post} />
         ))}
       </div>
