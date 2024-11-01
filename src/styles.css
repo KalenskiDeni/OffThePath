@@ -302,9 +302,10 @@ margin-top: 40px;
 
 .location {
 margin-left: 67px;
-margin-top: -33px;
+margin-top: -40px;
 font-weight: 350;
 font-size: 12px;
+margin-bottom: 20px;
 }
 
 .time {
@@ -407,6 +408,9 @@ margin-bottom: 12px;
 .avatar p {
   margin: 0;
   line-height: 1.2;
+}
+.post-card h3 {
+  margin-top: -15px;
 }
 
 .post-card .avatar img {
