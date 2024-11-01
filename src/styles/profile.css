@@ -85,13 +85,16 @@ p {
 
 /* Buttons */
 .action-btn {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  text-align: center;
+    display: inline-block;
+    width: 48%;
+    padding: 10px;
+    margin: 5px 1%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    color: #333;
+    font-weight: 500;
+    background-color: var(--brand-white);
 }
 
 /* Verification Section */
