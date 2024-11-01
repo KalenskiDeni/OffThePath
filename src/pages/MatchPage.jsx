@@ -17,6 +17,8 @@ export default function MatchPage() {
     const [ageRange, setAgeRange] = useState([18, 100]);
     const [filterAgeRange, setFilterAgeRange] = useState([18, 100]);
     const [activeFilter, setActiveFilter] = useState(null); // Track the active filter
+    const [selectedInterests, setSelectedInterests] = useState([]); // Store selected interests
+    const uniqueInterests = Array.from(new Set(data.flatMap(local => local.interests))); // Unique interests from locals
 
     useEffect(() => {
         const fetchData = async () => {
@@ -49,12 +51,18 @@ export default function MatchPage() {
 
             filtered = filtered.filter(local => local.age >= filterAgeRange[0] && local.age <= filterAgeRange[1]);
 
+            if (selectedInterests.length > 0) {
+                filtered = filtered.filter(local => 
+                    local.interests.some(interest => selectedInterests.includes(interest))
+                );
+            }
+
             setFilteredData(filtered);
             setCurrentIndex(0);
         };
 
         applyFilter();
-    }, [selectedGenders, filterAgeRange, data]);
+    }, [selectedGenders, filterAgeRange, selectedInterests, data]);
 
     const handleGenderChange = (gender) => {
         setSelectedGenders(prev =>
@@ -65,6 +73,12 @@ export default function MatchPage() {
     const handleApplyAgeFilter = () => {
         setFilterAgeRange(ageRange);
         setActiveFilter(null); // Close the age dropdown after applying the filter
+    };
+
+    const handleInterestChange = (interest) => {
+        setSelectedInterests(prev =>
+            prev.includes(interest) ? prev.filter(i => i !== interest) : [...prev, interest]
+        );
     };
 
     const handleNext = (isAccepted) => {
@@ -83,6 +97,10 @@ export default function MatchPage() {
 
     const toggleAgeDropdown = () => {
         setActiveFilter(activeFilter === 'age' ? null : 'age');
+    };
+
+    const toggleInterestsDropdown = () => {
+        setActiveFilter(activeFilter === 'interests' ? null : 'interests');
     };
 
     // Check if no locals match the filters or if all locals have been viewed
@@ -140,7 +158,7 @@ export default function MatchPage() {
 
                     {activeFilter === 'age' && (
                         <div className="age-range-dropdown">
-                            <h6>Age Range: {ageRange[0]} - {ageRange[1]}</h6>
+                            <h3>Age Range: {ageRange[0]} - {ageRange[1]}</h3>
                             <Range
                                 step={1}
                                 min={18}
@@ -178,6 +196,29 @@ export default function MatchPage() {
                             <button onClick={handleApplyAgeFilter} className="apply-filter-button">
                                 Apply Filter
                             </button>
+                        </div>
+                    )}
+
+                    {/* Interests Filter Dropdown */}
+                    <button
+                        className="filter-button"
+                        onClick={toggleInterestsDropdown}
+                    >
+                        Activities
+                    </button>
+
+                    {activeFilter === 'interests' && (
+                        <div className="dropdown-options">
+                            {uniqueInterests.map((interest, index) => (
+                                <label key={index}>
+                                    <input
+                                        type="checkbox"
+                                        checked={selectedInterests.includes(interest)}
+                                        onChange={() => handleInterestChange(interest)}
+                                    />
+                                    {interest}
+                                </label>
+                            ))}
                         </div>
                     )}
                 </div>
