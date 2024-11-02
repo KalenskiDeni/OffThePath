@@ -16,7 +16,7 @@ export default function HomePage() {
         "https://offthepath-webapp-default-rtdb.firebaseio.com/posts.json";
       const response = await fetch(url);
       const data = await response.json();
-      
+
       // Convert object to array
       const postsArray = Object.keys(data).map((postId) => ({
         id: postId,
@@ -30,7 +30,6 @@ export default function HomePage() {
 
   return (
     <section className="page">
-      
       {/* Tabs Section */}
       <div className="tab-buttons-home">
         <button
@@ -52,19 +51,21 @@ export default function HomePage() {
         {activeTab === "forYou" && (
           <>
             {/* Create Post Button */}
-      <div className="create-post-button">
-        <NavLink to="/create" activeClassName="active">
-          <div className="create-post-box">
-            <img src={avatarImage} alt="User avatar" className="search-avatar" />
-            <span className="placeholder-text">
-              Tell us about your latest adventure...
-            </span>
-          </div>
-        </NavLink>
-      </div>
-      <span className="text1-stories">
-              Stories
-            </span>
+            <div className="create-post-button">
+              <NavLink to="/create" activeClassName="active">
+                <div className="create-post-box">
+                  <img
+                    src={avatarImage}
+                    alt="User avatar"
+                    className="search-avatar"
+                  />
+                  <span className="placeholder-text">
+                    Tell us about your latest adventure...
+                  </span>
+                </div>
+              </NavLink>
+            </div>
+            <span className="text1-stories">Stories</span>
             {/* Stories Component */}
             <Stories />
 
