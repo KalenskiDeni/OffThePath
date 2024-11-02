@@ -8,11 +8,11 @@ export default function ExplorePage() {
   const [posts, setPosts] = useState([]); // set the initial state to an empty array
 
   {
-    /* Create Post Button */
+    /* Search bar */
   }
-  <div className="create-post-button">
-    <NavLink to="/create" activeClassName="active">
-      <div className="create-post-box">
+  <div className="search-bar-button">
+    <NavLink to="/search" activeClassName="active">
+      <div className="search-bar">
         <span className="placeholder-text">
           Tell us about your latest adventure...
         </span>
