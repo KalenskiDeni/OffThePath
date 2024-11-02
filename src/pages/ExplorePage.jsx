@@ -1,10 +1,24 @@
 import { useEffect, useState } from "react";
 import ExploreCard from "../components/ExploreCard";
+import { NavLink } from "react-router-dom";
 import "/src/styles/explore.css";
 import "/src/styles.css";
 
 export default function ExplorePage() {
   const [posts, setPosts] = useState([]); // set the initial state to an empty array
+
+  {
+    /* Create Post Button */
+  }
+  <div className="create-post-button">
+    <NavLink to="/create" activeClassName="active">
+      <div className="create-post-box">
+        <span className="placeholder-text">
+          Tell us about your latest adventure...
+        </span>
+      </div>
+    </NavLink>
+  </div>;
 
   // Fetch data from the API
   useEffect(() => {

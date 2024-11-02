@@ -159,7 +159,8 @@
   "explorePosts": {
     "Barcelona": {
       "location": "Barcelona, Spain",
-      "photo": "https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyY2Vsb25hfGVufDB8fDB8fHww"
+      "photo": "https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyY2Vsb25hfGVufDB8fDB8fHww",
+      "path": "/barcelona"
     },
     "Tokyo": {
       "location": "Tokyo, Japan",
