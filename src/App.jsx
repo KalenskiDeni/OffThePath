@@ -10,7 +10,10 @@ import ProfilePage from "./pages/ProfilePage";
 import SearchPage from "./pages/SearchPage";
 import BarcelonaPage from "./pages/BarcelonaPage";
 
+
 function App() {
+
+
   return (
     <>
       <Nav />
@@ -24,8 +27,12 @@ function App() {
           <Route path="/match" element={<MatchPage />} />
           <Route path="/chat" element={<ChatPage />} />
           <Route path="/profile" element={<ProfilePage />} />
+<<<<<<< Updated upstream
           <Route path="/search" element={<SearchPage />} />
           <Route path="/barcelona" element={<BarcelonaPage />} />
+=======
+         
+>>>>>>> Stashed changes
         </Routes>
       </main>
     </>
