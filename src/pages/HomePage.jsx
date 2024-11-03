@@ -5,6 +5,10 @@ import Stories from "../components/Stories"; // Import Stories component
 import { NavLink } from "react-router-dom";
 import "/src/styles/homepage.css";
 import avatarImage from "../assets/story-alex.png";
+import logo from "../assets/icons/logo-blue.svg";
+import searchIcon from "../assets/icons/search-icon.svg";
+import settingsIcon from "../assets/icons/cog-icon.svg";
+import bar from "../assets/status-bar.png";
 
 export default function HomePage() {
   const [posts, setPosts] = useState([]);
@@ -30,6 +34,18 @@ export default function HomePage() {
 
   return (
     <section className="page">
+
+<header className="top-bar">
+        <div className="top-bar-content">
+        <img src={bar} alt="status bar" className="bar" />
+          <img src={logo} alt="Off The Path Logo" className="logo" />
+          <div className="top-bar-icons">
+            <img src={searchIcon} alt="Search Icon" className="icon search-icon" />
+            <img src={settingsIcon} alt="Settings Icon" className="icon settings-icon" />
+          </div>
+        </div>
+      </header>
+     
       {/* Tabs Section */}
       <div className="tab-buttons-home">
         <button

@@ -111,6 +111,89 @@ form[action$="destroy"] button:hover,
   color: var(--white);
 }
 
+
+
+/* ---------- top bar ---------- */
+/* General styling for the header */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0ed; /* Background color */
+  padding: 10px 0;
+}
+
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  width: 90%; /* Central alignment with space around */
+  max-width: 800px; /* Adjust width based on your design */
+  justify-content: space-between;
+}
+
+/* Status bar styling */
+/* General styling for the header */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0ed; /* Background color */
+  padding: 50px 0;
+}
+
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  width: 90%; /* Central alignment with space around */
+  max-width: 800px; /* Adjust width based on your design */
+  justify-content: space-between;
+}
+
+/* Status bar styling */
+.bar {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin-top: -10px;
+}
+
+/* Logo styling */
+.logo {
+  height: 16px; /* Adjust logo height */
+  margin-right: auto;
+  color: #396660;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: -30px;
+}
+
+/* Icons container */
+.top-bar-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  margin-bottom: -30px;
+}
+
+/* Styling for individual icons */
+.icon {
+  height: 20px; /* Adjust icon size */
+  cursor: pointer;
+}
+
+.search-icon {
+  fill: #396660; /* Icon color */
+}
+
+.settings-icon {
+  fill: #396660; /* Icon color */
+}
+
+
 /* ---------- Form Specific Styling ---------- */
 form input {
   width: 100%;
@@ -247,7 +330,7 @@ nav a i {
 }
 
 .tab-buttons-home {
-  margin-top: 90px;
+  margin-top: 15px;
   display: flex;
 
   padding: 0 25px;
