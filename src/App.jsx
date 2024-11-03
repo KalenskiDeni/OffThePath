@@ -27,12 +27,8 @@ function App() {
           <Route path="/match" element={<MatchPage />} />
           <Route path="/chat" element={<ChatPage />} />
           <Route path="/profile" element={<ProfilePage />} />
-<<<<<<< Updated upstream
           <Route path="/search" element={<SearchPage />} />
           <Route path="/barcelona" element={<BarcelonaPage />} />
-=======
-         
->>>>>>> Stashed changes
         </Routes>
       </main>
     </>

@@ -39,7 +39,7 @@ export default function ChatPage() {
 
     return (
         <section className="chat-page">
-            <div className="search-bar">
+            <div className="search-bar-chat">
                 <input type="text" placeholder="Search..." />
             </div>
             <div className="tab-buttons">

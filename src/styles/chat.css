@@ -7,14 +7,14 @@
   font-size: 24px;
   }
   
-  .search-bar {
+  .search-bar-chat {
     display: flex;
     align-items: center;
     margin-bottom: 16px;
     margin-top: 80px;
   }
   
-  .search-bar input {
+  .search-bar-chat input {
     flex: 1;
     padding: 8px;
     border-radius: 16px;
