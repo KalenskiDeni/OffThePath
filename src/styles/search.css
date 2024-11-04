@@ -1,50 +1,7 @@
-* Top bar */ .top-bar {
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  background-color: #fff; /* Adjust as needed */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a nice effect */
-  height: 64px; /* Adjust as needed */
-}
-
-/* Top bar content alignment */
-.top-bar-content {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-/* Back button */
-.back-button {
-  width: 24px;
-  height: 24px;
-  margin-right: 16px; /* Adjust as needed */
-}
-
-/* The time, wifi, and battery icons */
-.bar {
-  margin-left: 16px; /* Adjust as needed */
-}
-
-/* Off The Path logo */
-.logo {
-  margin-left: 24px;
-  margin-right: auto;
-}
-
-/* Search bar button container */
-.search-bar-button {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px; /* Adjust as needed */
-}
-
 /* Search bar */
 .search-bar {
   display: flex;
   align-items: center;
-  background-color: #f9f9f9;
-  padding: 15px 15px;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
@@ -54,21 +11,8 @@
   border: none;
   outline: none;
   background: none;
+  width: 364px;
   flex: 1;
   font-size: 14px;
   color: #333;
-}
-
-/* Search button */
-.search-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.search-button:hover {
-  background-color: #0056b3;
 }

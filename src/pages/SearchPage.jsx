@@ -1,7 +1,7 @@
 //created by Beatrise
 
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import "/src/styles/search.css";
 import "/src/styles.css";
@@ -11,12 +11,12 @@ import bar from "../assets/status-bar.png";
 
 export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState("");
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.toLowerCase() === "barcelona") {
-      history.push("/barcelona");
+      navigate("/barcelona");
     } else {
       alert("No results found");
     }
@@ -44,9 +44,6 @@ export default function SearchPage() {
             placeholder="What do you want to explore?"
             className="search-input"
           />
-          <button type="submit" className="search-button">
-            Search
-          </button>
         </form>
       </div>
     </section>

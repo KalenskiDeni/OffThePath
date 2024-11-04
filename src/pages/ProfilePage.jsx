@@ -1,4 +1,3 @@
-import React from "react";
 import "/src/styles/profile.css";
 
 import globeIcon from "../assets/icons/globe-icon.png";
@@ -36,9 +35,9 @@ export default function ProfilePage() {
       </div>
 
       <div className="your-countries-button">
-      <img src={globeIcon} alt="Globe Icon" className="icon" />
-      <span>Your countries</span>
-    </div>
+        <img src={globeIcon} alt="Globe Icon" className="icon" />
+        <span>Your countries</span>
+      </div>
 
       <div className="profile-info">
         <div className="profile-header">
