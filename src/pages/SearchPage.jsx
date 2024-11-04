@@ -33,3 +33,6 @@ export default function SearchPage() {
     </section>
   );
 }
+
+//top-bar is the header of the page. it contains the logo, and back button
+//search-bar-button contains the search bar with placeholder text
