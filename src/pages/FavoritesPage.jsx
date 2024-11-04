@@ -1,3 +1,5 @@
+//created by Beatrise
+
 export default function FavoritesPage() {
   return (
     <section className="page">
