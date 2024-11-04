@@ -9,11 +9,9 @@ import ChatPage from "./pages/ChatPage";
 import ProfilePage from "./pages/ProfilePage";
 import SearchPage from "./pages/SearchPage";
 import BarcelonaPage from "./pages/BarcelonaPage";
-
+import FavoritesPage from "./pages/FavoritesPage";
 
 function App() {
-
-
   return (
     <>
       <Nav />
@@ -29,6 +27,7 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/barcelona" element={<BarcelonaPage />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
         </Routes>
       </main>
     </>
