@@ -7,6 +7,7 @@ export default function PostDetailPage() {
   const [post, setPost] = useState({});
   const navigate = useNavigate();
 
+  // Fetch the post when the component loads
   useEffect(() => {
     async function getPost() {
       const response = await fetch(
@@ -19,6 +20,12 @@ export default function PostDetailPage() {
     getPost();
   }, [id]);
 
+  // Navigate to the update page for this post
+  function navigateToUpdate() {
+    navigate(`/posts/${id}/update`);
+  }
+
+  // Handle deleting the post
   async function handleDelete() {
     const confirmDelete = window.confirm(
       "Are you sure you want to delete this post?"
@@ -37,6 +44,8 @@ export default function PostDetailPage() {
 
     if (response.ok) {
       navigate("/");
+    } else {
+      alert("Failed to delete the post. Please try again.");
     }
   }
 
@@ -46,10 +55,14 @@ export default function PostDetailPage() {
         <h1>{post.caption}</h1>
         <PostCard post={post} />
         <div className="btns">
+          {/* Delete Button */}
           <button className="btn-cancel" onClick={handleDelete}>
             Delete Post
           </button>
-          <button className="btn">Update Post</button>
+          {/* Update Button */}
+          <button className="btn" onClick={navigateToUpdate}>
+            Update Post
+          </button>
         </div>
       </div>
     </section>

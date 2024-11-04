@@ -9,6 +9,7 @@ import ChatPage from "./pages/ChatPage";
 import ProfilePage from "./pages/ProfilePage";
 import SearchPage from "./pages/SearchPage";
 import BarcelonaPage from "./pages/BarcelonaPage";
+import UpdatePage from "./pages/UpdatePage";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/barcelona" element={<BarcelonaPage />} />
+          <Route path="/posts/:id/update" element={<UpdatePage />} />
         </Routes>
       </main>
     </>
