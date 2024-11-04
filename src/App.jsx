@@ -11,7 +11,6 @@ import SearchPage from "./pages/SearchPage";
 import BarcelonaPage from "./pages/BarcelonaPage";
 import UpdatePage from "./pages/UpdatePage";
 
-
 function App() {
   return (
     <>

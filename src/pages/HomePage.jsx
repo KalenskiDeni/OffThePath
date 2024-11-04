@@ -34,18 +34,25 @@ export default function HomePage() {
 
   return (
     <section className="page">
-
-<header className="top-bar">
+      <header className="top-bar">
         <div className="top-bar-content">
-        <img src={bar} alt="status bar" className="bar" />
+          <img src={bar} alt="status bar" className="bar" />
           <img src={logo} alt="Off The Path Logo" className="logo" />
           <div className="top-bar-icons">
-            <img src={searchIcon} alt="Search Icon" className="icon search-icon" />
-            <img src={settingsIcon} alt="Settings Icon" className="icon settings-icon" />
+            <img
+              src={searchIcon}
+              alt="Search Icon"
+              className="icon search-icon"
+            />
+            <img
+              src={settingsIcon}
+              alt="Settings Icon"
+              className="icon settings-icon"
+            />
           </div>
         </div>
       </header>
-     
+
       {/* Tabs Section */}
       <div className="tab-buttons-home">
         <button

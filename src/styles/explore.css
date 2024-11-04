@@ -54,7 +54,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px; /* Adjust as needed */
+  margin-top: 16px; /* Adjust as needed */
   padding: 0 16px;
 }
 
@@ -64,4 +64,40 @@
   height: 24px;
   margin-left: 10px; /* Space between text and icon */
   margin-top: 10px; /* Space between text and icon */
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background-color: #fff; /* Adjust as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a nice effect */
+  height: 64px; /* Adjust as needed */
+}
+
+/* Top bar content alignment */
+.top-bar-content {
+  display: flex;
+  align-items: left;
+}
+
+/*back button*/
+.back-button {
+  display: flex;
+  align-items: left;
+  padding-top: 40px;
+}
+
+/*the time, wifi and battery icons*/
+.bar {
+  margin-left: 16px; /* Adjust as needed */
+}
+
+/*off the path logo*/
+.logo {
+  margin-left: 40px;
+  margin-right: auto;
+  width: 118px;
+  height: 12px;
 }

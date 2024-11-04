@@ -1,3 +1,5 @@
+//created by Beatrise
+
 export default function BarcelonaPage() {
   return (
     <section className="page">
