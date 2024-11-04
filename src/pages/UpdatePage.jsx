@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-
 export default function UpdatePage() {
   const [content, setContent] = useState("");
   const [image, setImage] = useState("");
+  const [location, setLocation] = useState(""); // State for location
   const params = useParams();
   const navigate = useNavigate();
 
@@ -18,6 +18,7 @@ export default function UpdatePage() {
       if (postData) {
         setContent(postData.content);
         setImage(postData.image);
+        setLocation(postData.location || ""); // Set initial location
       } else {
         console.log("Error fetching post data or post does not exist");
       }
@@ -29,7 +30,7 @@ export default function UpdatePage() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    const postToUpdate = { content, image };
+    const postToUpdate = { content, image, location }; // Include location in the update
 
     try {
       const response = await fetch(url, {
@@ -40,7 +41,7 @@ export default function UpdatePage() {
 
       if (response.ok) {
         console.log("Update successful");
-        navigate(`/posts/${params.id}`); // Make sure this route exists
+        navigate(`/posts/${params.id}`); // Ensure this route exists
       } else {
         console.error("Update failed", response.statusText);
       }
@@ -51,20 +52,20 @@ export default function UpdatePage() {
 
   function handleImageChange(event) {
     const file = event.target.files[0];
-    if (file.size < 500000) {
+    if (file && file.size < 500000) { // Check for file size
       const reader = new FileReader();
       reader.onload = (event) => {
         setImage(event.target.result);
       };
       reader.readAsDataURL(file);
     } else {
-      console.log("Image file is too large");
+      console.log("Image file is too large or no file selected");
     }
   }
 
   return (
-    <section className="page" id="update-page">
-      <div className="container">
+    <section className="page create-post-page" id="update-page">
+      <div className="container post-input-container">
         <h1>Update Post</h1>
         <form className="form-grid" onSubmit={handleSubmit}>
           <label htmlFor="content">Content</label>
@@ -76,6 +77,17 @@ export default function UpdatePage() {
             aria-label="content"
             placeholder="Update your post content..."
             onChange={(e) => setContent(e.target.value)}
+            className="caption-input" // Apply your existing styles
+          />
+          <label htmlFor="location">Location</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            value={location}
+            placeholder="Enter location..."
+            onChange={(e) => setLocation(e.target.value)}
+            className="caption-input" // Use the same styles as caption-input
           />
           <label htmlFor="image-url">Image</label>
           <input
@@ -84,14 +96,14 @@ export default function UpdatePage() {
             accept="image/*"
             onChange={handleImageChange}
           />
-          <label htmlFor="image-preview"></label>
+          <label htmlFor="image-preview" className="image-preview-label"></label>
           <img
             id="image-preview"
             className="image-preview"
-            src={image || "placeholder-image-url"} // Provide a default image or placeholder URL
+            src={image || "placeholder-image-url"} // Default placeholder image
             alt="Image Preview"
           />
-          <button type="submit">Update Post</button>
+          <button type="submit" className="header-btn share-btn">Update Post</button>
         </form>
       </div>
     </section>

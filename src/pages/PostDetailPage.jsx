@@ -52,7 +52,7 @@ export default function PostDetailPage() {
   return (
     <section className="page" id="post-page">
       <div className="container">
-        <h1>{post.caption}</h1>
+       
         <PostCard post={post} />
         <div className="btns">
           {/* Delete Button */}
@@ -61,7 +61,7 @@ export default function PostDetailPage() {
           </button>
           {/* Update Button */}
           <button className="btn" onClick={navigateToUpdate}>
-            Update Post
+            Edit Post
           </button>
         </div>
       </div>
