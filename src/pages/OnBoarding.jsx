@@ -1,4 +1,4 @@
-import React from "react";
+import { NavLink } from "react-router-dom";
 import "/src/styles/onboarding.css";
 import gif from "/src/assets/vid.gif"; // Path to your GIF file
 
@@ -18,8 +18,9 @@ function MyComponent() {
           your terms. <br />
           Let’s make travel unforgettable!
         </p>
-
-        <button className="Continue">Continue</button>
+        <NavLink to="/signin" activeClassName="active">
+          <button className="Continue">Continue</button>
+        </NavLink>
         <button className="Skip">Skip for now</button>
       </div>
     </div>
