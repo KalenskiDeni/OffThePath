@@ -15,9 +15,9 @@ export default function Nav() {
 
   return (
     <nav>
-      <NavLink to="/" exact activeClassName="active">
+      <NavLink to="/home" exact activeClassName="active">
         <img
-          src={location.pathname === "/" ? homeFilled : homeOutlined}
+          src={location.pathname === "/home" ? homeFilled : homeOutlined}
           alt="Home"
           className="icon"
         />
