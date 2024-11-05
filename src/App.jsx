@@ -1,4 +1,10 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 import Nav from "./components/Nav";
 import CreatePage from "./pages/CreatePage";
 import HomePage from "./pages/HomePage";
@@ -14,9 +20,12 @@ import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
 
 function App() {
+  const location = useLocation();
+  const hideNavPaths = ["/", "/signin", "/signup"]; // Add paths where you want to hide the navbar
+
   return (
     <>
-      <Nav />
+      {!hideNavPaths.includes(location.pathname) && <Nav />}
       <main>
         <Routes>
           <Route path="/" element={<OnBoarding />} />
