@@ -1,0 +1,150 @@
+.page {
+    font-family: Arial, sans-serif;
+    max-width: 393px;
+    margin: auto;
+    padding: 20px;
+    color: #333;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    max-width: 393px;
+  }
+  
+  .header img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .header h2 {
+    font-size: 18px;
+    color: #1D7874;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    margin-left: -270px;
+  }
+  
+  p {
+    color: #6b6b6b;
+  }
+  
+  span {
+    color: #1D7874;
+    
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+    
+    
+  }
+  
+  .input-field {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    width: 100%;
+    
+  }
+  
+  .input-field .icon {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+  }
+  
+  .forgot-password {
+    font-size: 14px;
+    color: #1D7874;
+    text-align: right;
+    cursor: pointer;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #1D7874;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .apple-login,
+  .google-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 140px;
+  }
+  
+  .apple-login {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .google-login {
+    background-color: #fff;
+    color: #6b6b6b;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .social-login .icon {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .register-link {
+    text-align: center;
+    color: #6b6b6b;
+    margin-top: 10px;
+  }
+  
+  .register-link a {
+    color: #1D7874;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .error-message p {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+
+  
