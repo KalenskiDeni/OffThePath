@@ -26,6 +26,7 @@
   color: white;
   font-size: 14px;
   font-weight: 400;
+  font-family: 'Poppins';
 }
 
 /* Grid container for the cards */
@@ -48,6 +49,7 @@
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
   width: 316px;
+  font-family: 'Poppins';
 }
 
 .search-bar-button {
