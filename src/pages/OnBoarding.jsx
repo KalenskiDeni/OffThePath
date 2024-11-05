@@ -13,7 +13,8 @@ function MyComponent() {
 
       <div className="content">
         <h1 className="Title">Go OFF THE PATH!</h1>
-        <p>
+        <br />
+        <p className="Paragraph">
           Connect with locals, discover hidden gems, and explore the world on
           your terms. <br />
           Let’s make travel unforgettable!
@@ -21,7 +22,9 @@ function MyComponent() {
         <NavLink to="/signin" activeClassName="active">
           <button className="Continue">Continue</button>
         </NavLink>
-        <button className="Skip">Skip for now</button>
+        <NavLink to="/signin" activeClassName="active">
+          <button className="Skip">Skip for now</button>
+        </NavLink>
       </div>
     </div>
   );
