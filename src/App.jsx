@@ -17,7 +17,8 @@ function App() {
       <Nav />
       <main>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<OnBoarding />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/create" element={<CreatePage />} />
           <Route path="/posts/:id" element={<PostDetailPage />} />
           <Route path="*" element={<Navigate to="/" />} />
@@ -26,8 +27,7 @@ function App() {
           <Route path="/chat" element={<ChatPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/search" element={<SearchPage />} />
-          <Route path="/barcelona" element={<BarcelonaPage />} />
-          <Route path="/onboarding" element={<OnBoarding />} />
+          <Route path="/barcelona" element={<BarcelonaPage />} />{" "}
         </Routes>
       </main>
     </>
