@@ -3,7 +3,7 @@
 export default function BarcelonaPage() {
   return (
     <div>
-      <h1>Welcome to Barcelona</h1>
+      <h1>Barcelona</h1>
     </div>
   );
 }
