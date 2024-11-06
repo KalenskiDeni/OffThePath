@@ -9,6 +9,8 @@ import mailIcon from "../assets/icons/mail-icon.svg";
 import lockIcon from "../assets/icons/lock-icon.svg";
 import appleIcon from "../assets/icons/apple-icon.svg";
 import googleIcon from "../assets/icons/google-icon.svg";
+import logo from "../assets/icons/logo-blue.svg";
+import backButton from "../assets/icons/backButton.svg";
 
 export default function SignInPage() {
   const [errorMessage, setErrorMessage] = useState("");
@@ -32,8 +34,8 @@ export default function SignInPage() {
   return (
     <section id="sign-in-page" className="page">
       <div className="header">
-        <img src={arrowIcon} alt="Back" className="back-icon" />
-        <h2 className="app-title">OFF THE PATH</h2>
+      <img src={backButton} alt="Back Button" className="back-button" />
+      <img src={logo} alt="Off The Path Logo" className="logo" />
       </div>
       <h1 className="login-title">Log In</h1>
       <p className="login-subtext">

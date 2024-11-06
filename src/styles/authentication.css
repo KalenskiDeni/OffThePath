@@ -10,7 +10,9 @@
   .header {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
+    margin-top: 80px;
+    margin-left: -110px;
   }
   
   .back-icon {
