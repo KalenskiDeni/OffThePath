@@ -6,42 +6,67 @@
     color: #333;
   }
   
+  /* Header */
   .header {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    max-width: 393px;
   }
   
-  .header img {
+  .back-icon {
     width: 20px;
     height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
   }
   
-  .header h2 {
+  .app-title {
     font-size: 18px;
     color: #1D7874;
+    font-weight: 600;
+    margin-top: 170px;
   }
   
-  h1 {
+  /* Titles and Subtexts */
+  .login-title {
     font-size: 28px;
-    margin-bottom: 5px;
+    font-weight: 700;
+    margin: 0 0 5px;
     margin-left: -270px;
   }
   
-  p {
+  .login-subtext {
     color: #6b6b6b;
+    margin-bottom: 20px;
   }
   
-  span {
+  .highlight {
     color: #1D7874;
+    font-weight: bold;
+  }
+  
+  /* Form */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    background-color: var(--Brand-white);
+    box-shadow: none;
+    margin-top: -30px;
     
   }
   
+  /* Input Groups */
   .input-group {
     margin-bottom: 15px;
-    
-    
+
+  }
+  
+  .input-label {
+    font-size: 14px;
+    color: #6b6b6b;
+    margin-bottom: 5px;
+    display: block;
   }
   
   .input-field {
@@ -51,36 +76,43 @@
     border-radius: 10px;
     padding: 10px;
     background-color: #f7f7f7;
-    width: 100%;
-    
+    width: 130%;
+    border-radius: var(--M, 16px);
+background: #E8E8E8;
+width: 361px;
+height: 57px;
+flex-shrink: 0;
+
+
   }
   
-  .input-field .icon {
+  .input-icon {
     margin-right: 10px;
     width: 20px;
     height: 20px;
   }
   
-  input[type="email"],
-  input[type="password"] {
+  .input-box {
     border: none;
     background: none;
     outline: none;
     font-size: 16px;
-    width: 100%;
-    display: flex;
+    width: 130%;
+    box-shadow: none;
   }
   
+  /* Forgot Password */
   .forgot-password {
     font-size: 14px;
     color: #1D7874;
     text-align: right;
     cursor: pointer;
-    margin-top: -10px;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
   }
   
+  /* Login Button */
   .login-btn {
+
     width: 100%;
     padding: 12px;
     font-size: 16px;
@@ -89,17 +121,26 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    font-weight: bold;
     margin-bottom: 20px;
+    display: flex;
+width: 361px;
+height: 55px;
+padding: 8px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+flex-shrink: 0;
   }
   
+  /* Social Login */
   .social-login {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
   
-  .apple-login,
-  .google-login {
+  .social-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,44 +148,50 @@
     font-size: 16px;
     border-radius: 10px;
     cursor: pointer;
-    margin-left: 140px;
+    width: 100%;
   }
   
   .apple-login {
     background-color: #000;
     color: #fff;
+    width: 361px;
+height: 55px;
+flex-shrink: 0;
   }
   
   .google-login {
     background-color: #fff;
     color: #6b6b6b;
     border: 1px solid #e0e0e0;
+    width: 361px;
+height: 55px;
+flex-shrink: 0;
   }
   
-  .social-login .icon {
+  .social-icon {
     margin-right: 8px;
     width: 20px;
     height: 20px;
   }
   
+  /* Register Link */
   .register-link {
     text-align: center;
     color: #6b6b6b;
-    margin-top: 10px;
+    font-size: 14px;
   }
   
-  .register-link a {
+  .register-link-text {
     color: #1D7874;
     font-weight: bold;
     text-decoration: none;
   }
   
-  .error-message p {
+  /* Error Message */
+  .error-message {
+    text-align: center;
     color: red;
     font-size: 14px;
-    text-align: center;
     margin-top: 10px;
   }
-  
-
   

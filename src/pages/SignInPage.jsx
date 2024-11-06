@@ -1,6 +1,6 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { auth } from "../firebase-config";
 import "../styles/authentication.css";
 
@@ -19,11 +19,11 @@ export default function SignInPage() {
     const password = event.target.password.value;
 
     signInWithEmailAndPassword(auth, mail, password)
-      .then((userCredential) => {
+      .then(userCredential => {
         const user = userCredential.user;
-        console.log(user); // Logging the authenticated user
+        console.log(user);
       })
-      .catch((error) => {
+      .catch(error => {
         let code = error.code.replaceAll("-", " ").replaceAll("auth/", "");
         setErrorMessage(code);
       });
@@ -32,33 +32,34 @@ export default function SignInPage() {
   return (
     <section id="sign-in-page" className="page">
       <div className="header">
-        <img src={arrowIcon} alt="Back" className="icon" />
-        <h2>OFF THE PATH</h2>
+        <img src={arrowIcon} alt="Back" className="back-icon" />
+        <h2 className="app-title">OFF THE PATH</h2>
       </div>
-      <h1>Log In</h1>
-      <p>
-        Log in now to access all the features of <span>OffThePath!</span>
+      <h1 className="login-title">Log In</h1>
+      <p className="login-subtext">
+        Log in now to access all the features of <span className="highlight">OffThePath!</span>
       </p>
 
-      <form id="sign-in-form" onSubmit={handleSignIn}>
-        <div className="input-group">
-          <label htmlFor="mail">Email</label>
-          <div className="input-field">
-            <img src={mailIcon} alt="Mail icon" className="icon" />
+      <form id="sign-in-form" className="login-form" onSubmit={handleSignIn}>
+        <div className="input-group email-group">
+          <label htmlFor="mail" className="input-label">Email</label>
+          <div className="input-field email-field">
+            <img src={mailIcon} alt="Mail icon" className="input-icon" />
             <input
               id="mail"
               type="email"
               name="mail"
               placeholder="Ex: email@example.com"
               required
+              className="input-box"
             />
           </div>
         </div>
 
-        <div className="input-group">
-          <label htmlFor="password">Your Password</label>
-          <div className="input-field">
-            <img src={lockIcon} alt="Lock icon" className="icon" />
+        <div className="input-group password-group">
+          <label htmlFor="password" className="input-label">Your Password</label>
+          <div className="input-field password-field">
+            <img src={lockIcon} alt="Lock icon" className="input-icon" />
             <input
               id="password"
               type="password"
@@ -66,38 +67,36 @@ export default function SignInPage() {
               placeholder="********"
               autoComplete="current-password"
               required
+              className="input-box"
             />
           </div>
         </div>
 
         <p className="forgot-password">Forgot Password?</p>
 
-        <button type="submit" className="login-btn">
-          Log In
-        </button>
+        <button type="submit" className="login-btn">Log In</button>
 
         <div className="social-login">
-          <button className="apple-login">
-            <img src={appleIcon} alt="Apple icon" className="icon" />
+          <button className="apple-login social-btn">
+            <img src={appleIcon} alt="Apple icon" className="social-icon" />
             Sign in with Apple
           </button>
-          <button className="google-login">
-            <img src={googleIcon} alt="Google icon" className="icon" />
+          <button className="google-login social-btn">
+            <img src={googleIcon} alt="Google icon" className="social-icon" />
             Continue with Google
           </button>
         </div>
       </form>
 
       <p className="register-link">
-        Do you not have an account?
-        <NavLink to="/signup" activeClassName="active">
-          <button className="login-btn">Register</button>
-        </NavLink>
+        Do not have an account? <Link to="/signup" className="register-link-text">Register</Link>
       </p>
 
-      <div className="error-message">
-        <p>{errorMessage}</p>
-      </div>
+      {errorMessage && (
+        <div className="error-message">
+          <p>{errorMessage}</p>
+        </div>
+      )}
     </section>
   );
 }
