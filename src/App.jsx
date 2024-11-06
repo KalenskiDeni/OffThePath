@@ -18,6 +18,7 @@ import BarcelonaPage from "./pages/BarcelonaPage";
 import OnBoarding from "./pages/OnBoarding";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
+import FavoritesPage from "./pages/FavoritesPage";
 
 function App() {
   const location = useLocation();
@@ -41,6 +42,7 @@ function App() {
           <Route path="/barcelona" element={<BarcelonaPage />} />
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
         </Routes>
       </main>
     </>

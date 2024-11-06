@@ -1,6 +1,6 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { auth } from "../firebase-config";
 import "../styles/authentication.css";
 
@@ -19,11 +19,11 @@ export default function SignInPage() {
     const password = event.target.password.value;
 
     signInWithEmailAndPassword(auth, mail, password)
-      .then(userCredential => {
+      .then((userCredential) => {
         const user = userCredential.user;
         console.log(user); // Logging the authenticated user
       })
-      .catch(error => {
+      .catch((error) => {
         let code = error.code.replaceAll("-", " ").replaceAll("auth/", "");
         setErrorMessage(code);
       });
@@ -36,8 +36,10 @@ export default function SignInPage() {
         <h2>OFF THE PATH</h2>
       </div>
       <h1>Log In</h1>
-      <p>Log in now to access all the features of <span>OffThePath!</span></p>
-      
+      <p>
+        Log in now to access all the features of <span>OffThePath!</span>
+      </p>
+
       <form id="sign-in-form" onSubmit={handleSignIn}>
         <div className="input-group">
           <label htmlFor="mail">Email</label>
@@ -70,8 +72,10 @@ export default function SignInPage() {
 
         <p className="forgot-password">Forgot Password?</p>
 
-        <button type="submit" className="login-btn">Log In</button>
-        
+        <button type="submit" className="login-btn">
+          Log In
+        </button>
+
         <div className="social-login">
           <button className="apple-login">
             <img src={appleIcon} alt="Apple icon" className="icon" />
@@ -85,7 +89,10 @@ export default function SignInPage() {
       </form>
 
       <p className="register-link">
-        Do not have an account? <Link to="/sign-up">Register</Link>
+        Do you not have an account?
+        <NavLink to="/signup" activeClassName="active">
+          <button className="login-btn">Register</button>
+        </NavLink>
       </p>
 
       <div className="error-message">
