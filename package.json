@@ -1,9 +1,12 @@
 {
+  "homepage": "https://KalenskiDeni.github.io/OffThePath",
   "name": "react-vite-starter",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "start": "vite",
     "build": "vite build",
