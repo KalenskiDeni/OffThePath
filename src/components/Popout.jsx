@@ -1,7 +1,6 @@
 //created by Beatrise
 
 import "/src/styles.css";
-import React from "react";
 import "/src/styles/popout.css";
 
 const ResizePopout = ({ isOpen, onClose }) => {
