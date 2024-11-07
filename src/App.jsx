@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import { Navigate, Route, Routes } from "react-router-dom";
-=======
 import {
   BrowserRouter as Router,
   Route,
@@ -9,7 +7,6 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useState, useEffect } from "react";
->>>>>>> 00f5ea161699881a627b8690cbf9ebd7336cfaab
 import Nav from "./components/Nav";
 import CreatePage from "./pages/CreatePage";
 import HomePage from "./pages/HomePage";
@@ -23,14 +20,12 @@ import BarcelonaPage from "./pages/BarcelonaPage";
 import UpdatePage from "./pages/UpdatePage";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
-<<<<<<< HEAD
 import { auth } from "./firebase-config";
 import { onAuthStateChanged } from "firebase/auth";
 import { useState } from "react";
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth") === "true");
-=======
 import FavoritesPage from "./pages/FavoritesPage";
 import Popout from "./components/Popout"; // Import the modal component
 
@@ -46,7 +41,6 @@ function App() {
       setIsPopoutOpen(false);
     }
   }, [location.pathname]);
->>>>>>> 00f5ea161699881a627b8690cbf9ebd7336cfaab
 
   // Authentication state handler
   onAuthStateChanged(auth, (user) => {
@@ -64,7 +58,6 @@ function App() {
   // Private Routes for authenticated users
   const privateRoutes = (
     <>
-<<<<<<< HEAD
       <Nav />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -80,7 +73,6 @@ function App() {
         {/* Catch-all redirect */}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-=======
       {!hideNavPaths.includes(location.pathname) && <Nav />}
       <main>
         <Popout isOpen={isPopoutOpen} onClose={() => setIsPopoutOpen(false)} />
@@ -102,7 +94,6 @@ function App() {
           <Route path="/favorites" element={<FavoritesPage />} />
         </Routes>
       </main>
->>>>>>> 00f5ea161699881a627b8690cbf9ebd7336cfaab
     </>
   );
 
