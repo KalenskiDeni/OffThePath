@@ -38,7 +38,7 @@ export default function PostDetailPage() {
     const response = await fetch(
       `https://offthepath-webapp-default-rtdb.firebaseio.com/posts/${id}.json`,
       {
-        method: "DELETE"
+        method: "DELETE",
       }
     );
 
@@ -52,7 +52,6 @@ export default function PostDetailPage() {
   return (
     <section className="page" id="post-page">
       <div className="container">
-       
         <PostCard post={post} />
         <div className="btns">
           {/* Delete Button */}
