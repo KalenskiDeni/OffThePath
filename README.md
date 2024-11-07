@@ -1,34 +1,24 @@
-# React with RACE 🚀
+# OFF THE PATH 
 
-Jumpstart your React project in Vite with this blazing-fast Single Page Application starter template. Benefit from HMR (Hot Module Replacement) and crucial ESLint rules.
+Welcome to the glorious adventure of our AmAzInG coded webapp solution!
 
-A RACE implementation of a Single Page Application using React Router v6 and Page Components. Get ready to sprint ahead 🏁
+Get ready to amazed by our stupid choices, obvious help from ChatGPT, and "copy-paste" code lines from RACE's given templates ;D
 
 ## Quick Start Guide
 
-### 1. Clone or Fork the Repository
+### 1. Open the digital solution
 
-```bash
-git clone https://github.com/cederdorff/react-vite-spa.git
-cd your-repo
-```
+...duh
 
-Or use GitHub Desktop ✨
 
-### 2. Install Dependencies
+### 2. Resize the page to mobile size 📲
 
-```bash
-npm install
-```
+We reccommend 393px x 804px ;)
 
-### 3. Start the Development Server
+### 3. Explore, explore, EXPLORE!!!
 
-```bash
-npm run dev
-```
+But don't click on too many things, as some "sudden misstakes" can be accidentally found 🫢🤭
 
-Your React project is now live at localhost (see the terminal). Start coding and enjoy the benefits of HMR (Hot Module Replacement) and ESLint rules!
+### 4. See who did what... *eghem, eghem*
 
-### 4. Explore RACE Implementation
-
-Check out the power of React Router v6 and Page Components in this RACE implementation of a Single Page Application. Dive into the code and start building your awesome app! 🏁
+Look for names mentioned in the comments, or find something else (hint: I can buy myself floweeeeers)
