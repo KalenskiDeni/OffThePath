@@ -4,6 +4,7 @@ Welcome to the glorious adventure of our AmAzInG coded webapp solution!
 
 Get ready to amazed by our stupid choices, obvious help from ChatGPT, and "copy-paste" code lines from RACE's given templates ;D
 
+
 ## Quick Start Guide
 
 ### 1. Open the digital solution
@@ -15,10 +16,17 @@ Get ready to amazed by our stupid choices, obvious help from ChatGPT, and "copy-
 
 We reccommend 393px x 804px ;)
 
+
 ### 3. Explore, explore, EXPLORE!!!
 
 But don't click on too many things, as some "sudden misstakes" can be accidentally found 🫢🤭
 
+
 ### 4. See who did what... *eghem, eghem*
 
-Look for names mentioned in the comments, or find something else (hint: I can buy myself floweeeeers)
+Look for names mentioned in the comments, or find something else... (hint: I can buy myself floweeeeers)
+
+
+### 5. Okay, that's enough fun time
+
+When you've had enough of our masterpiece, get "off our path" and pls be nice to us in the exam room☺️
