@@ -12,10 +12,9 @@ import BarcelonaPage from "./pages/BarcelonaPage";
 import UpdatePage from "./pages/UpdatePage";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
-<<<<<<< Updated upstream
+
 import OnBoarding from "./pages/OnBoarding";
-=======
->>>>>>> Stashed changes
+
 import { auth } from "./firebase-config";
 import { onAuthStateChanged } from "firebase/auth";
 import { useState } from "react";
