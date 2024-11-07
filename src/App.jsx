@@ -12,13 +12,7 @@ import BarcelonaPage from "./pages/BarcelonaPage";
 import UpdatePage from "./pages/UpdatePage";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
-<<<<<<< HEAD
 import OnBoarding from "./pages/OnBoarding";
-=======
-
-import OnBoarding from "./pages/OnBoarding";
-
->>>>>>> a0f9ce698d6208092a29f138f350f9f89d22aad2
 import { auth } from "./firebase-config";
 import { onAuthStateChanged } from "firebase/auth";
 import { useState } from "react";
