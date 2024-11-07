@@ -27,6 +27,14 @@ function App() {
   const hideNavPaths = ["/", "/signin", "/signup"]; // Add paths where you want to hide the navbar
   const [isPopoutOpen, setIsPopoutOpen] = useState(true);
 
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setIsPopoutOpen(true);
+    } else {
+      setIsPopoutOpen(false);
+    }
+  }, [location.pathname]);
+
   return (
     <>
       {!hideNavPaths.includes(location.pathname) && <Nav />}
