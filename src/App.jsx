@@ -5,6 +5,7 @@ import {
   Navigate,
   useLocation,
 } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Nav from "./components/Nav";
 import CreatePage from "./pages/CreatePage";
 import HomePage from "./pages/HomePage";
@@ -19,15 +20,19 @@ import OnBoarding from "./pages/OnBoarding";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
 import FavoritesPage from "./pages/FavoritesPage";
+import Popout from "./components/Popout"; // Import the modal component
 
 function App() {
   const location = useLocation();
   const hideNavPaths = ["/", "/signin", "/signup"]; // Add paths where you want to hide the navbar
+  const [isPopoutOpen, setIsPopoutOpen] = useState(true);
 
   return (
     <>
       {!hideNavPaths.includes(location.pathname) && <Nav />}
       <main>
+        <Popout isOpen={isPopoutOpen} onClose={() => setIsPopoutOpen(false)} />
+
         <Routes>
           <Route path="/" element={<OnBoarding />} />
           <Route path="/home" element={<HomePage />} />
