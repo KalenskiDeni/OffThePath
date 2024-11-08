@@ -14,7 +14,7 @@ Get ready to amazed by our stupid choices, obvious help from ChatGPT, and "copy-
 
 ### 2. Resize the page to mobile size 📲
 
-We reccommend 393px x 804px ;)
+We reccommend 393px x 804px ;) or just open it on your phone
 
 
 ### 3. Explore, explore, EXPLORE!!!
