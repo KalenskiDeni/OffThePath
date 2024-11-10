@@ -23,10 +23,12 @@ export default function MatchPage() {
     const [selectedInterests, setSelectedInterests] = useState([]); // Store selected interests
     const uniqueInterests = Array.from(new Set(data.flatMap(local => local.interests))); // Unique interests from locals
 
+    
+    // Fetching data from database
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(
+                const response = await fetch( //waits until all the data is loaded to process it
                     "https://offthepath-webapp-default-rtdb.firebaseio.com/locals.json"
                 );
                 if (!response.ok) {
@@ -34,25 +36,26 @@ export default function MatchPage() {
                 }
                 const result = await response.json();
                 setData(Object.values(result));
-            } catch (err) {
+            } catch (err) { // if the error was found
                 setError(err.message);
             } finally {
-                setLoading(false);
+                setLoading(false); //finished loading of data
             }
         };
 
         fetchData();
     }, []);
 
-    useEffect(() => {
+    // Filters
+    useEffect(() => { //useEffect - 'activates' the code whenver something changes , user use filter
         const applyFilter = () => {
             let filtered = data;
 
-            if (selectedGenders.length > 0) {
+            if (selectedGenders.length > 0) { // if the user wants to filter then the code does its jobb
                 filtered = filtered.filter(local => selectedGenders.includes(local.gender));
             }
 
-            filtered = filtered.filter(local => local.age >= filterAgeRange[0] && local.age <= filterAgeRange[1]);
+            filtered = filtered.filter(local => local.age >= filterAgeRange[0] && local.age <= filterAgeRange[1]); // checks if the local is between the minimum 0 and the maximum 1 age that the use chose
 
             if (selectedInterests.length > 0) {
                 filtered = filtered.filter(local => 
@@ -61,46 +64,52 @@ export default function MatchPage() {
             }
 
             setFilteredData(filtered);
-            setCurrentIndex(0);
+            setCurrentIndex(0); //shows the first person grom the list that matches the filtered criteria
         };
 
-        applyFilter();
+        applyFilter(); //whenver any element below changes the useEffect will start again and put this function to work to automatically apply new filters
     }, [selectedGenders, filterAgeRange, selectedInterests, data]);
 
+    // Gender
     const handleGenderChange = (gender) => {
-        setSelectedGenders(prev =>
-            prev.includes(gender) ? prev.filter(g => g !== gender) : [...prev, gender]
+        setSelectedGenders(prev => //prev is currently chosen genders
+            prev.includes(gender) ? prev.filter(g => g !== gender) : [...prev, gender] //if the gender is already on the list then the code creates a new list without it (ofc if the users unclick the gender), if the gender is not on the list of chosen fgenders and the user clicks on it the the code adds the gender to the list. It is so simply Idk why I am writing that much
         );
     };
 
+    // Age Range
     const handleApplyAgeFilter = () => {
         setFilterAgeRange(ageRange);
         setActiveFilter(null); // Close the age dropdown after applying the filter
     };
 
+    // Interets
     const handleInterestChange = (interest) => {
         setSelectedInterests(prev =>
             prev.includes(interest) ? prev.filter(i => i !== interest) : [...prev, interest]
         );
     };
 
+    // Accepting and rejecting people 
     const handleNext = (isAccepted) => {
         if (isAccepted) {
-            console.log(`Accepted: ${filteredData[currentIndex].name}`);
+            console.log(`Accepted: ${filteredData[currentIndex].name}`); //
         } else {
             console.log(`Rejected: ${filteredData[currentIndex].name}`);
         }
 
-        setCurrentIndex(prevIndex => prevIndex + 1);
+        setCurrentIndex(prevIndex => prevIndex + 1); // after one action t 9accepting.rejecting) function comes to the next local on the list
     };
 
+    // Making sure only one filter is open at the time, we dont like to have to many choices to make
     const toggleGenderDropdown = () => {
-        setActiveFilter(activeFilter === 'gender' ? null : 'gender');
+        setActiveFilter(activeFilter === 'gender' ? null : 'gender'); //if its active it will be put in null and closed
         if (activeFilter === 'age' || activeFilter === 'interests') {
-            setActiveFilter('gender');
+            setActiveFilter('gender'); // if the other filter is active and the user clicks on the gender filter then the other one will be closed
         }
     };
 
+    //same 
     const toggleAgeDropdown = () => {
         setActiveFilter(activeFilter === 'age' ? null : 'age');
         if (activeFilter === 'gender' || activeFilter === 'interests') {
@@ -108,6 +117,7 @@ export default function MatchPage() {
         }
     };
 
+    //same
     const toggleInterestsDropdown = () => {
         setActiveFilter(activeFilter === 'interests' ? null : 'interests');
         if (activeFilter === 'gender' || activeFilter === 'age') {
@@ -121,7 +131,7 @@ export default function MatchPage() {
 
     return (
         <section className="page1">
-            {!allLocalsViewed && (
+            {!allLocalsViewed && ( //if it false then the code runs
                 <div className="filter-section">
                     {/* Gender Filter Dropdown */}
                     <div className="filter-container">
@@ -181,7 +191,7 @@ export default function MatchPage() {
                                         max={100}
                                         values={ageRange}
                                         onChange={(values) => setAgeRange(values)}
-                                        renderTrack={({ props, children }) => (
+                                        renderTrack={({ props, children }) => ( //styling the track
                                             <div
                                                 {...props}
                                                 style={{
@@ -196,7 +206,7 @@ export default function MatchPage() {
                                                 {children}
                                             </div>
                                         )}
-                                        renderThumb={({ props }) => (
+                                        renderThumb={({ props }) => ( //styling those two things on the sides
                                             <div
                                                 {...props}
                                                 style={{
@@ -245,11 +255,11 @@ export default function MatchPage() {
             )}
 
             <div className="container1">
-                {loading && <p>Loading...</p>}
-                {error && <p>Error: {error}</p>}
+                {loading && <p>Loading...</p>} {/* it will show loading if its loading */}
+                {error && <p>Error: {error}</p>} {/* it will show error if theres an erorr */}
 
-                {!noLocalsMatchFilter && !allLocalsViewed ? (
-                    <div className="local-card">
+                {!noLocalsMatchFilter && !allLocalsViewed ? ( //this will show if there are locals matching the crtieria
+                    <div className="local-card"> 
                         <div className="avatar1-container">
                             <img
                                 src={filteredData[currentIndex].avatar}
@@ -274,7 +284,7 @@ export default function MatchPage() {
                         </div>
                         <p>{filteredData[currentIndex].about}</p>
                     </div>
-                ) : (
+                ) : ( //this will show if there are no locals matching the crtieria or available
                     <p>
                         {noLocalsMatchFilter
                             ? "No locals available with the matching filter"
@@ -282,7 +292,7 @@ export default function MatchPage() {
                     </p>
                 )}
 
-                {!allLocalsViewed && currentIndex < filteredData.length && (
+                {!allLocalsViewed && currentIndex < filteredData.length && ( //it will show options to scroll if all the locals weren viewed and if there is still someone considering filtered data
                     <div className="button-container">
                         <button onClick={() => handleNext(false)} className="yes">
                             <img src={matchNO} alt="NO" className="iconY" />

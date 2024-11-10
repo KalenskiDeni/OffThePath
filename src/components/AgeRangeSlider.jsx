@@ -4,14 +4,14 @@ import { Range } from "react-range";
 export default function AgeRangeSlider({ minAge, maxAge, onRangeChange }) {
     const [values, setValues] = useState([minAge, maxAge]);
 
-    const handleRangeChange = (values) => {
-        setValues(values);
+    const handleRangeChange = (values) => { // ativates when user changes the age range
+        setValues(values);  // new age range values
         onRangeChange(values);
     };
 
     return (
         <div className="age-range-slider">
-            <h3>Wiek: {values[0]} - {values[1]}+</h3>
+            <h3>Age: {values[0]} - {values[1]}+</h3>
             <Range
                 step={1}
                 min={18}
