@@ -1,14 +1,17 @@
+// Created by Deni Kalenski
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "/src/styles/createpage.css";
 
-// Normal imports for icon images
-import profileIcon from "../assets/profile-img.png"; // profile placeholder
-import publicIcon from "../assets/icons/public-icon.svg"; // public privacy icon
+// Importing our images and icons
+import profileIcon from "../assets/profile-img.png"; 
+import publicIcon from "../assets/icons/public-icon.svg"; 
 import photosIcon from "../assets/icons/image-icon.svg";
 import videosIcon from "../assets/icons/video-icon.svg";
 import locationIcon from "../assets/icons/location-icon.svg";
 
+// CreatePage component
 export default function CreatePage() {
   const [caption, setCaption] = useState("");
   const [image, setImage] = useState("");
@@ -20,7 +23,13 @@ export default function CreatePage() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    const post = { caption, image, video, location, uid: "ZfPTVEMQKf9vhNiUh0bj" };
+    const post = {
+      caption,
+      image,
+      video,
+      location,
+      uid: "ZfPTVEMQKf9vhNiUh0bj",
+    };
 
     const response = await fetch(
       "https://offthepath-webapp-default-rtdb.firebaseio.com/posts.json",
@@ -53,6 +62,7 @@ export default function CreatePage() {
     }
   }
 
+  // Return the JSX for the CreatePage component
   return (
     <section className="page create-post-page">
       {/* Header */}
@@ -85,15 +95,14 @@ export default function CreatePage() {
           onChange={(e) => setCaption(e.target.value)}
         />
 
-         {/* Image URL Input and Preview */}
-         <input
+        {/* Image URL Input and Preview */}
+        <input
           type="url"
           className="image-url-input"
           placeholder="Paste an image URL..."
           value={image}
           onChange={(e) => setImage(e.target.value)}
         />
-        
 
         {/* Image Preview */}
         {image && (
@@ -141,17 +150,27 @@ export default function CreatePage() {
         />
 
         {/* Buttons to Trigger Image/Video Upload and Location Input */}
-        <button className="media-option" onClick={() => document.getElementById("imageUpload").click()}>
+        <button
+          className="media-option"
+          onClick={() => document.getElementById("imageUpload").click()}
+        >
           <img src={photosIcon} alt="Photos" className="media-icon" /> Photos
         </button>
-        <button className="media-option" onClick={() => document.getElementById("videoUpload").click()}>
+        <button
+          className="media-option"
+          onClick={() => document.getElementById("videoUpload").click()}
+        >
           <img src={videosIcon} alt="Videos" className="media-icon" /> Videos
         </button>
-        <button className="media-option" onClick={() => {
-          const location = prompt("Enter location:");
-          setLocation(location);
-        }}>
-          <img src={locationIcon} alt="Location" className="media-icon" /> Location
+        <button
+          className="media-option"
+          onClick={() => {
+            const location = prompt("Enter location:");
+            setLocation(location);
+          }}
+        >
+          <img src={locationIcon} alt="Location" className="media-icon" />{" "}
+          Location
         </button>
       </footer>
     </section>
