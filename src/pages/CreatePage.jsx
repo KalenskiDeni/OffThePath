@@ -1,12 +1,12 @@
-
+//created by Mila
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "/src/styles/createpage.css";
 
 // Importing our images and icons
-import profileIcon from "../assets/profile-img.png"; 
-import publicIcon from "../assets/icons/public-icon.svg"; 
+import profileIcon from "../assets/profile-img.png";
+import publicIcon from "../assets/icons/public-icon.svg";
 import photosIcon from "../assets/icons/image-icon.svg";
 import videosIcon from "../assets/icons/video-icon.svg";
 import locationIcon from "../assets/icons/location-icon.svg";
@@ -31,6 +31,8 @@ export default function CreatePage() {
       uid: "ZfPTVEMQKf9vhNiUh0bj",
     };
 
+    // fetch function is used to make an HTTP request. await keyword is used to wait for the request to complete and get the response.
+    // POST request sends dara to the server to create a new resource
     const response = await fetch(
       "https://offthepath-webapp-default-rtdb.firebaseio.com/posts.json",
       {

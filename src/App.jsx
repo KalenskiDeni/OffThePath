@@ -42,6 +42,7 @@ function App() {
     <>
       <Nav />
       <Routes>
+        {/*the routes, when the user navigates to any of them, the assigned page component is rendered*/}
         <Route path="/" element={<HomePage />} />
         <Route path="/posts/:id" element={<PostDetailPage />} />
         <Route path="/explore" element={<ExplorePage />} />
