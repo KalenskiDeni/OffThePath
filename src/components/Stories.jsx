@@ -1,11 +1,12 @@
-// Stories.js
+// Created by Deni Kalenski
 import React, { useEffect, useState } from "react";
 import storyImage from "../assets/story-alex.png";
 
-
+// Stories component
 const Stories = () => {
   const [stories, setStories] = useState([]);
 
+  // Fetch the stories data from our firebase
   useEffect(() => {
     const fetchStories = async () => {
       try {
@@ -26,6 +27,7 @@ const Stories = () => {
     fetchStories();
   }, []);
 
+  // Return the stories component
   return (
     <div className="stories">
       <div className="story create-story">

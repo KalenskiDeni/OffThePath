@@ -1,9 +1,11 @@
+// Created by Deni Kalenski
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase-config";
 import "/src/styles/authentication.css";
 
+// SignUpPage component
 export default function SignUpPage() {
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -16,15 +18,15 @@ export default function SignUpPage() {
     const password = form.password.value;
 
     createUserWithEmailAndPassword(auth, mail, password)
-      .then(userCredential => {
+      .then((userCredential) => {
         // Created and signed in
         const user = userCredential.user;
-        createUser(user.uid, name, mail); // creating a new user in the database
+        createUser(user.uid, name, mail); // Creating a new user in the database
       })
-      .catch(error => {
-        let code = error.code; // saving error code in variable
+      .catch((error) => {
+        let code = error.code; // Saving error code in variable
         console.log(code);
-        code = code.replaceAll("-", " "); // some JS string magic to display error message. See the log above in the console
+        code = code.replaceAll("-", " "); // Some JS string magic to display error message.
         code = code.replaceAll("auth/", "");
         setErrorMessage(code);
       });
@@ -34,7 +36,7 @@ export default function SignUpPage() {
     const url = `https://fb-rest-race-default-rtdb.firebaseio.com/users/${uid}.json`;
     const response = await fetch(url, {
       method: "PUT",
-      body: JSON.stringify({ name, mail })
+      body: JSON.stringify({ name, mail }),
     });
     if (response.ok) {
       const data = await response.json();
@@ -44,6 +46,7 @@ export default function SignUpPage() {
     }
   }
 
+  // Return the JSX for the SignUpPage component
   return (
     <section id="sign-up-page" className="page">
       <h1>Sign Up</h1>
