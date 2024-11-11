@@ -126,3 +126,5 @@ export default function BarcelonaPage() {
     </div>
   );
 }
+
+//ah, i wish i was buying myself flowers in Barcelona and NOT SITTING IN THE DUMB OLD BLUE ROOM!!!!!!!

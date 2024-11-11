@@ -9,3 +9,4 @@ export default function FavoritesPage() {
 }
 
 // it is not properly done, but it shows the connections between the explore page and favorites page :]
+// its the thought that counts

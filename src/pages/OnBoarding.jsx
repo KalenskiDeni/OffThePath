@@ -20,7 +20,9 @@ function MyComponent() {
           your terms. <br />
           Let’s make travel unforgettable!
         </p>
-        <NavLink to="/signin" activeClassName="active"> {/* they both navigate to the same location because now we dont have the full onboarding */}
+        <NavLink to="/signin" activeClassName="active">
+          {" "}
+          {/* they both navigate to the same location because now we dont have the full onboarding */}
           <button className="Continue">Continue</button>
         </NavLink>
         <NavLink to="/signin" activeClassName="active">
@@ -32,3 +34,5 @@ function MyComponent() {
 }
 
 export default MyComponent;
+
+// i want to onboard a flight to the moon

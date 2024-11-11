@@ -118,3 +118,5 @@ export default function HomePage() {
     </section>
   );
 }
+
+//ive sat at the blue room much more this month that at the dining table at home... veri veri sad
