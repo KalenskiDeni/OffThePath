@@ -1,3 +1,5 @@
+// Created by Mila
+
 // HomePage.js
 import { useEffect, useState } from "react";
 import PostCard from "../components/PostCard";
@@ -10,10 +12,13 @@ import searchIcon from "../assets/icons/search-icon.svg";
 import settingsIcon from "../assets/icons/cog-icon.svg";
 import bar from "../assets/status-bar.png";
 
+// useState is a hook that lets you add state to functional components.
+// It returns an array with two elements: the current state value and a function to update that state.
 export default function HomePage() {
   const [posts, setPosts] = useState([]);
   const [activeTab, setActiveTab] = useState("forYou");
 
+  // useEffect hook to fetch posts from the database
   useEffect(() => {
     async function fetchPosts() {
       const url =
@@ -21,7 +26,7 @@ export default function HomePage() {
       const response = await fetch(url);
       const data = await response.json();
 
-      // Convert object to array
+      // Convert object to array for easier iteration, consistent data structure & state management
       const postsArray = Object.keys(data).map((postId) => ({
         id: postId,
         ...data[postId],
@@ -32,6 +37,7 @@ export default function HomePage() {
     fetchPosts();
   }, []);
 
+  //a return statement defines the HTML structure of the component that will be rendered on the webpage
   return (
     <section className="page">
       <header className="top-bar">
