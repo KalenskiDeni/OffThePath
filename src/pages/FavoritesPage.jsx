@@ -7,3 +7,5 @@ export default function FavoritesPage() {
     </div>
   );
 }
+
+// it is not properly done, but it shows the connections between the explore page and favorites page :]
