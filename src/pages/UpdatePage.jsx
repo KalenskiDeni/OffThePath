@@ -60,13 +60,14 @@ export default function UpdatePage() {
   function handleImageChange(event) {
     const file = event.target.files[0];
     if (file && file.size < 500000) {
-      const reader = new FileReader();
+      // Check if a file is selected and its size is less than 500KB
+      const reader = new FileReader(); // Create a new FileReader object
       reader.onload = (event) => {
-        setImage(event.target.result);
+        setImage(event.target.result); // Set the image to the result of the FileReader
       };
       reader.readAsDataURL(file);
     } else {
-      console.log("Image file is too large or no file selected");
+      console.log("Image file is too large or no file selected"); // Log a message if the file is too large or not selected
     }
   }
 
