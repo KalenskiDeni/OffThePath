@@ -24,7 +24,7 @@
 
 .app-title {
   font-size: 18px;
-  color: #1D7874;
+  color: #1d7874;
   font-weight: 600;
   margin-top: 170px;
 }
@@ -43,7 +43,7 @@
 }
 
 .highlight {
-  color: #1D7874;
+  color: #1d7874;
   font-weight: bold;
 }
 
@@ -55,13 +55,11 @@
   background-color: var(--Brand-white);
   box-shadow: none;
   margin-top: -30px;
-  
 }
 
 /* Input Groups */
 .input-group {
   margin-bottom: 15px;
-
 }
 
 .input-label {
@@ -80,12 +78,10 @@
   background-color: #f7f7f7;
   width: 130%;
   border-radius: var(--M, 16px);
-background: #E8E8E8;
-width: 361px;
-height: 57px;
-flex-shrink: 0;
-
-
+  background: #e8e8e8;
+  width: 361px;
+  height: 57px;
+  flex-shrink: 0;
 }
 
 .input-icon {
@@ -106,7 +102,7 @@ flex-shrink: 0;
 /* Forgot Password */
 .forgot-password {
   font-size: 14px;
-  color: #1D7874;
+  color: #1d7874;
   text-align: right;
   cursor: pointer;
   margin: 0 0 20px;
@@ -114,25 +110,24 @@ flex-shrink: 0;
 
 /* Login Button */
 .login-btn {
-
   width: 100%;
   padding: 12px;
   font-size: 16px;
   color: white;
-  background-color: #1D7874;
+  background-color: #1d7874;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
   margin-bottom: 20px;
   display: flex;
-width: 361px;
-height: 55px;
-padding: 8px;
-justify-content: center;
-align-items: center;
-gap: 8px;
-flex-shrink: 0;
+  width: 361px;
+  height: 55px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 /* Social Login */
@@ -157,8 +152,8 @@ flex-shrink: 0;
   background-color: #000;
   color: #fff;
   width: 361px;
-height: 55px;
-flex-shrink: 0;
+  height: 55px;
+  flex-shrink: 0;
 }
 
 .google-login {
@@ -166,8 +161,8 @@ flex-shrink: 0;
   color: #6b6b6b;
   border: 1px solid #e0e0e0;
   width: 361px;
-height: 55px;
-flex-shrink: 0;
+  height: 55px;
+  flex-shrink: 0;
 }
 
 .social-icon {
@@ -184,7 +179,7 @@ flex-shrink: 0;
 }
 
 .register-link-text {
-  color: #1D7874;
+  color: #1d7874;
   font-weight: bold;
   text-decoration: none;
 }

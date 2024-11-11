@@ -39,7 +39,7 @@
   }
   
   .tab-buttons button.active {
-    background-color: var(--brand-blue); /* Change to your accent color */
+    background-color: var(--brand-blue); 
     color: white;
   }
   
@@ -59,7 +59,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #ccc; /* Placeholder for avatar image */
+    background-color: #ccc; 
     margin-right: 10px;
   }
   
@@ -86,7 +86,7 @@
   }
   
   .unread-badge {
-    background-color: var(--brand-blue); /* Unread badge color */
+    background-color: var(--brand-blue); 
     color: white;
     font-size: 0.65em;
     padding: 0px 6px;

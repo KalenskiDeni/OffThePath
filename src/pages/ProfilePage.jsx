@@ -1,5 +1,7 @@
+// Created by Deni Kalenski
 import "/src/styles/profile.css";
 
+// Importing icons and images
 import globeIcon from "../assets/icons/globe-icon.png";
 import arrowIcon from "../assets/icons/arrow-icon.svg";
 import languageIcon from "../assets/icons/flag/DK.svg";
@@ -10,6 +12,7 @@ import archiveIcon from "../assets/icons/archive-icon.svg";
 import subscriptionsIcon from "../assets/icons/star-icon.svg";
 import travelIcon from "../assets/icons/travel-icon.png";
 
+// ProfilePage component
 export default function ProfilePage() {
   return (
     <section className="profile-page">
