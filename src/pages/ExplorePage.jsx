@@ -6,9 +6,9 @@ import { NavLink } from "react-router-dom";
 import "/src/styles/explore.css";
 import "/src/styles.css";
 import HeartIcon from "../assets/icons/heart.svg"; //for the button that leads to favorites page
-import logo from "../assets/icons/logo-blue.svg";
-import backButton from "../assets/icons/backButton.svg";
-import bar from "../assets/status-bar.png";
+import logo from "../assets/icons/logo-blue.svg"; //for the OFF THE PATH logo
+import backButton from "../assets/icons/backButton.svg"; //for the back button on the top bar
+import bar from "../assets/status-bar.png"; //for the iOS status bar at the top of the screen
 
 export default function ExplorePage() {
   const [posts, setPosts] = useState([]); // set the initial state to an empty array
@@ -16,20 +16,20 @@ export default function ExplorePage() {
   useEffect(() => {
     async function fetchPosts() {
       const url =
-        "https://offthepath-webapp-default-rtdb.firebaseio.com/explorePosts.json"; // fetch data from the url, specifically the explorePosts section
-      const response = await fetch(url);
-      const data = await response.json(); // get the data from the response and parse it
-      // from object to array
+        "https://offthepath-webapp-default-rtdb.firebaseio.com/explorePosts.json"; // fetch data from the JSON file, specifically the explorePosts section
+      const response = await fetch(url); // fetch the data from the URL
+      const data = await response.json();
       const postsArray = Object.keys(data).map((postId) => ({
         id: postId,
         ...data[postId],
-      })); // map the data to an array of objects
-      setPosts(postsArray); // set the posts state with the postsArray
+      }));
+      setPosts(postsArray); // Update the state with the array of posts
     }
 
     fetchPosts();
   }, []);
 
+  // the following code defines the structure and content of the ExplorePage component. It includes a top bar with navigation links and icons, a search bar with a placeholder text, a favorites button, and a container for explore cards. The posts array is mapped to render an ExploreCard component for each post.
   return (
     <section className="page">
       <header className="top-bar">
@@ -63,5 +63,3 @@ export default function ExplorePage() {
     </section>
   );
 }
-
-//top-bar is the header of the page. it contains the logo, and back button
