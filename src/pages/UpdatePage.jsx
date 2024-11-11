@@ -1,11 +1,10 @@
-
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function UpdatePage() {
   const [content, setContent] = useState("");
   const [image, setImage] = useState("");
-  const [location, setLocation] = useState(""); 
+  const [location, setLocation] = useState("");
   const params = useParams();
   const navigate = useNavigate();
 
@@ -16,11 +15,11 @@ export default function UpdatePage() {
     async function getPost() {
       const response = await fetch(url);
       const postData = await response.json();
-      console.log("Fetched Data:", postData); 
+      console.log("Fetched Data:", postData);
       if (postData) {
         setContent(postData.content);
         setImage(postData.image);
-        setLocation(postData.location || ""); 
+        setLocation(postData.location || "");
       } else {
         console.log("Error fetching post data or post does not exist");
       }
@@ -32,7 +31,7 @@ export default function UpdatePage() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    const postToUpdate = { content, image, location }; 
+    const postToUpdate = { content, image, location };
 
     try {
       const response = await fetch(url, {
@@ -43,7 +42,7 @@ export default function UpdatePage() {
 
       if (response.ok) {
         console.log("Update successful");
-        navigate(`/posts/${params.id}`); 
+        navigate(`/posts/${params.id}`);
       } else {
         console.error("Update failed", response.statusText);
       }
@@ -80,7 +79,7 @@ export default function UpdatePage() {
             aria-label="content"
             placeholder="Update your post content..."
             onChange={(e) => setContent(e.target.value)}
-            className="caption-input" 
+            className="caption-input"
           />
           <label htmlFor="location">Location</label>
           <input
@@ -90,7 +89,7 @@ export default function UpdatePage() {
             value={location}
             placeholder="Enter location..."
             onChange={(e) => setLocation(e.target.value)}
-            className="caption-input" 
+            className="caption-input"
           />
           <label htmlFor="image-url">Image</label>
           <input
@@ -106,7 +105,7 @@ export default function UpdatePage() {
           <img
             id="image-preview"
             className="image-preview"
-            src={image || "placeholder-image-url"} 
+            src={image || "placeholder-image-url"}
             alt="Image Preview"
           />
           <button type="submit" className="header-btn share-btn">

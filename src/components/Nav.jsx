@@ -1,3 +1,4 @@
+// Created by Deni Kalenski
 import { NavLink, useLocation } from "react-router-dom";
 import homeOutlined from "../assets/icons/home-outlined.svg";
 import homeFilled from "../assets/icons/home-filled.svg";
@@ -10,9 +11,11 @@ import chatFilled from "../assets/icons/chat-filled.svg";
 import profileOutlined from "../assets/icons/profile-outlined.svg";
 import profileFilled from "../assets/icons/profile-filled.svg";
 
+// Nav component
 export default function Nav() {
   const location = useLocation(); // Get the current location to determine active route
 
+  // Return the navigation links
   return (
     <nav>
       <NavLink to="/home" exact activeClassName="active">
