@@ -1,5 +1,3 @@
-//created by Magda
-
 import React, { useEffect, useState } from "react";
 import { Range } from "react-range";
 import "/src/styles/match.css";
