@@ -1,6 +1,7 @@
+// Created by Magda
 import { NavLink } from "react-router-dom";
 import "/src/styles/onboarding.css";
-import gif from "/src/assets/vid.gif"; // Path to your GIF file
+import gif from "/src/assets/vid.gif"; // Video path
 
 function MyComponent() {
   return (
@@ -19,7 +20,7 @@ function MyComponent() {
           your terms. <br />
           Let’s make travel unforgettable!
         </p>
-        <NavLink to="/signin" activeClassName="active">
+        <NavLink to="/signin" activeClassName="active"> {/* they both navigate to the same location because now we dont have the full onboarding */}
           <button className="Continue">Continue</button>
         </NavLink>
         <NavLink to="/signin" activeClassName="active">
