@@ -1,3 +1,4 @@
+// Created by Magda
 import React, { useEffect, useState } from "react";
 import { Range } from "react-range";
 import "/src/styles/match.css";
@@ -73,7 +74,7 @@ export default function MatchPage() {
     // Gender
     const handleGenderChange = (gender) => {
         setSelectedGenders(prev => //prev is currently chosen genders
-            prev.includes(gender) ? prev.filter(g => g !== gender) : [...prev, gender] //if the gender is already on the list then the code creates a new list without it (ofc if the users unclick the gender), if the gender is not on the list of chosen fgenders and the user clicks on it the the code adds the gender to the list. It is so simply Idk why I am writing that much
+            prev.includes(gender) ? prev.filter(g => g !== gender) : [...prev, gender] //if the gender is already on the list then the code creates a new list without it (ofc if the users unclick the gender), if the gender is not on the list of chosen genders and the user clicks on it the code adds the gender to the list. It is so simple Idk why I am writing that much
         );
     };
 
