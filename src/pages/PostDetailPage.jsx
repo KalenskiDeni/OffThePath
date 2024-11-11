@@ -1,3 +1,5 @@
+// Created by Mila
+
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import PostCard from "../components/PostCard";
@@ -32,7 +34,7 @@ export default function PostDetailPage() {
     );
 
     if (!confirmDelete) {
-      return;
+      return; // if the user cancels, the function returns early and does nothing
     }
 
     const response = await fetch(
@@ -43,9 +45,9 @@ export default function PostDetailPage() {
     );
 
     if (response.ok) {
-      navigate("/");
+      navigate("/"); //if the delete request is successful, navigate back to the home page
     } else {
-      alert("Failed to delete the post. Please try again.");
+      alert("Failed to delete the post. Please try again."); //if the delete request fails, show an alert
     }
   }
 
