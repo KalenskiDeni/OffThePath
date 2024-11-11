@@ -1,11 +1,17 @@
-import { useEffect, useState } from "react";
+//created by Mila
 
+import { useEffect, useState } from "react"; //hooks that help with side effects and state management.
+
+// UserAvatar is a function that takes a uid (user ID) as a prop.
 export default function UserAvatar({ uid }) {
-  const [user, setUser] = useState({}); // create a state to store the user data
+  //user is a state variable that stores user data. setUser is a function that updates the user state.
+  const [user, setUser] = useState({});
 
+  // useEffect is a hook that runs the getUser function when the component mounts.
   useEffect(() => {
-    getUser(); // call the getUser function
+    getUser();
 
+    // getUser is a function that fetches user data from the Firebase Realtime Database using the user ID (uid) prop.
     async function getUser() {
       const response = await fetch(
         `https://offthepath-webapp-default-rtdb.firebaseio.com/users/${uid}.json`
@@ -13,7 +19,7 @@ export default function UserAvatar({ uid }) {
       const data = await response.json();
       setUser(data); // set the user state with the data from firebase
     }
-  }, [uid]); // <--- "[id]" VERY IMPORTANT!!!
+  }, [uid]);
   return (
     <div className="avatar">
       <img src={user?.image} alt={user?.id} />
